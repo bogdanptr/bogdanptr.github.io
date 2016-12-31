@@ -1,2 +1,2 @@
-# ptrsc.io-src
-Source code for my personal website
+# bogdanptr.github.io
+Personal website

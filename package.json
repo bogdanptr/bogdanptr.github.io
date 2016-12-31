@@ -1,0 +1,26 @@
+{
+  "name": "bogdanptr.github.io",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bogdanptr/bogdanptr.github.io.git"
+  },
+  "author": "Bogdan Petrescu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bogdanptr/bogdanptr.github.io/issues"
+  },
+  "homepage": "https://github.com/bogdanptr/bogdanptr.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-pug": "^3.2.0",
+    "gulp-sass": "^3.0.0"
+  }
+}

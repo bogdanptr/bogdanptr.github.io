@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bogdanptr/bogdanptr.github.io.git"
+    "url": "git+https://github.com/bogdanptr/ptrsc.io-src.git"
   },
   "author": "Bogdan Petrescu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bogdanptr/bogdanptr.github.io/issues"
+    "url": "https://github.com/bogdanptr/ptrsc.io-src/issues"
   },
-  "homepage": "https://github.com/bogdanptr/bogdanptr.github.io#readme",
+  "homepage": "https://github.com/bogdanptr/ptrsc.io-src#readme",
   "devDependencies": {
     "browser-sync": "^2.18.5",
     "gulp": "^3.9.1",

@@ -10,7 +10,9 @@ var gulp          = require('gulp'),
                     ]}
 
 gulp.task('pug', function() {
-  return gulp.src('src/templates/**/*.pug')
+  return gulp.src(['src/templates/**/*.pug',
+                  '!src/templates/layout/**/*',
+                  '!src/templates/includes/**/*'])
     .pipe(pug({
       pretty: false,
       compileDebug: true,
@@ -29,7 +31,6 @@ gulp.task('sass', function() {
   }))
 });
 
-// Static server
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {

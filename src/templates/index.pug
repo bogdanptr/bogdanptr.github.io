@@ -1,9 +1,12 @@
-doctype html
-head
-  meta(charset = "utf-8")
-  title My website
-  link(rel = "stylesheet", href = "/assets/css/style.css")
-  meta(name = "description", content = "This is my personal website")
-  meta(name = "viewport", content = "width=device-width, initial-scale=1")
-body
-  h1 Hello world!
+extends /layout/base
+
+//- Page specific vars
+block vars
+  -
+    page = {
+      title: "Ptrsc - Bogdan Petrescu",
+      description: "My personal site"
+    }
+
+block content
+  h1 Test test

@@ -1,6 +1,7 @@
 var gulp          = require('gulp'),
     sass          = require('gulp-sass'),
     pug           = require('gulp-pug'),
+    imagemin      = require('gulp-imagemin'),
     browserSync   = require('browser-sync'). create(),
     clean         = require('gulp-clean'),
     paths         = {
@@ -31,6 +32,20 @@ gulp.task('sass', function() {
   }))
 });
 
+gulp.task('images', function() {
+  return gulp.src('src/assets/img/**/*')
+    .pipe(imagemin([
+       imagemin.gifsicle(),
+       imagemin.jpegtran({progressive: true}),
+       imagemin.optipng(),
+       imagemin.svgo()
+     ]))
+    .pipe(gulp.dest('dist/assets/img'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+});
+
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
@@ -50,4 +65,4 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['pug', 'sass', 'browser-sync', 'copy'], function() {});
+gulp.task('default', ['pug', 'sass', 'images', 'browser-sync', 'copy'], function() {});

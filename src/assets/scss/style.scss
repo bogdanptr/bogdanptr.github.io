@@ -1,3 +1,6 @@
-body {
-  background-color: red;
-}
+// Normalize.css
+@import "vendor/normalize";
+
+// Custom styles
+@import "base/core";
+@import "components/typography";

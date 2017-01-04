@@ -3,15 +3,17 @@ var gulp          = require('gulp'),
     pug           = require('gulp-pug'),
     imagemin      = require('gulp-imagemin'),
     autoprefixer  = require('gulp-autoprefixer'),
+    uglify        = require('gulp-uglify'),
     browserSync   = require('browser-sync'). create(),
     clean         = require('gulp-clean'),
     paths         = {
                       extras: [
                         'favicon.ico',
                         'CNAME',
+                        '/assets/js/bootstrap.min.js',
                     ]}
 
-gulp.task('css', function() {
+gulp.task('scss', function() {
   return gulp.src('src/assets/scss/**/*.scss')
     .pipe(sass({
           includePaths: ['src/assets/scss'],
@@ -42,13 +44,13 @@ gulp.task('pug', function() {
     .pipe(browserSync.stream())
 });
 
-gulp.task('sass', function() {
-  return gulp.src('src/assets/scss/**/*.scss')
-  .pipe(sass())
-  .pipe(gulp.dest('dist/assets/css'))
-  .pipe(browserSync.reload({
-    stream: true
-  }))
+gulp.task('js', function () {
+  return gulp.src('src/assets/js/**/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/assets/js/'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 });
 
 gulp.task('images', function() {
@@ -84,4 +86,4 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['pug', 'sass', 'images', 'browser-sync', 'copy'], function() {});
+gulp.task('default', ['pug', 'scss', 'js', 'images', 'browser-sync', 'copy'], function() {});

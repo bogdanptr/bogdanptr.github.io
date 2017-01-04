@@ -2,6 +2,7 @@ var gulp          = require('gulp'),
     sass          = require('gulp-sass'),
     pug           = require('gulp-pug'),
     imagemin      = require('gulp-imagemin'),
+    autoprefixer  = require('gulp-autoprefixer'),
     browserSync   = require('browser-sync'). create(),
     clean         = require('gulp-clean'),
     paths         = {
@@ -9,6 +10,24 @@ var gulp          = require('gulp'),
                         'favicon.ico',
                         'CNAME',
                     ]}
+
+gulp.task('css', function() {
+  return gulp.src('src/assets/scss/**/*.scss')
+    .pipe(sass({
+          includePaths: ['src/assets/scss'],
+          outputStyle: 'compressed',
+          errLogToConsole: true
+        }))
+    .pipe(
+      autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    .pipe(gulp.dest('dist/assets/css/'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+});
 
 gulp.task('pug', function() {
   return gulp.src(['src/templates/**/*.pug',
@@ -61,7 +80,7 @@ gulp.task('clean', function () {
 
 gulp.task('copy', function () {
   gulp
-    .src(paths.extras,  {cwd: ''})
+    .src(paths.extras,  {cwd: 'src/'})
     .pipe(gulp.dest('dist'));
 });
 

@@ -86,4 +86,12 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['pug', 'scss', 'js', 'images', 'browser-sync', 'copy'], function() {});
+// Rerun the task when a file changes
+gulp.task('watch', function() {
+  gulp.watch('src/assets/scss/**/*.scss', ['css']);
+  gulp.watch('src/assets/js/**/*.js',     ['js']);
+  gulp.watch('src/assets/img/**/*',       ['images']);
+  gulp.watch('src/templates/**/*',        ['pug', 'copy']);
+});
+
+gulp.task('default', ['pug', 'scss', 'js', 'images', 'browser-sync', 'copy', 'watch'], function() {});

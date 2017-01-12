@@ -10,8 +10,10 @@ var gulp          = require('gulp'),
                       extras: [
                         'favicon.ico',
                         'CNAME',
-                        '/assets/js/bootstrap.min.js',
-                    ]}
+                      ],
+                      fonts: [
+                        'millerdisplay-light.ttf'
+                      ]}
 
 gulp.task('scss', function() {
   return gulp.src('src/assets/scss/**/*.scss')
@@ -84,11 +86,14 @@ gulp.task('copy', function () {
   gulp
     .src(paths.extras,  {cwd: 'src/'})
     .pipe(gulp.dest('dist'));
+  gulp
+    .src(paths.fonts,  {cwd: 'src/assets/fonts/'})
+    .pipe(gulp.dest('dist/assets/fonts'));
 });
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-  gulp.watch('src/assets/scss/**/*.scss', ['css']);
+  gulp.watch('src/assets/scss/**/*.scss', ['scss']);
   gulp.watch('src/assets/js/**/*.js',     ['js']);
   gulp.watch('src/assets/img/**/*',       ['images']);
   gulp.watch('src/templates/**/*',        ['pug', 'copy']);

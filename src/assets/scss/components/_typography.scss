@@ -3,3 +3,13 @@ Typography
 */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+@font-face {
+    font-family: "Millerdisplay-light";
+    src: url('../assets/fonts/millerdisplay-light.ttf') format("truetype");
+}
+
+.header-text {
+  font-family: 'Millerdisplay-light';
+  color: #fff;
+}

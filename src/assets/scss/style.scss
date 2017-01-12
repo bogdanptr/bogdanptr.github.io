@@ -1,14 +1,14 @@
 /*!
- * Bootstrap v4.0.0-alpha.5 (https://getbootstrap.com)
- * Copyright 2011-2016 The Bootstrap Authors
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
 // Core variables and mixins
-@import "vendor/bootstrap/custom";
 @import "vendor/bootstrap/variables";
 @import "vendor/bootstrap/mixins";
+@import "vendor/bootstrap/custom";
 
 // Reset and dependencies
 @import "vendor/bootstrap/normalize";
@@ -25,7 +25,7 @@
 @import "vendor/bootstrap/buttons";
 
 // Components
-@import "vendor/bootstrap/animation";
+@import "vendor/bootstrap/transitions";
 @import "vendor/bootstrap/dropdown";
 @import "vendor/bootstrap/button-group";
 @import "vendor/bootstrap/input-group";
@@ -35,7 +35,7 @@
 @import "vendor/bootstrap/card";
 @import "vendor/bootstrap/breadcrumb";
 @import "vendor/bootstrap/pagination";
-@import "vendor/bootstrap/tags";
+@import "vendor/bootstrap/badge";
 @import "vendor/bootstrap/jumbotron";
 @import "vendor/bootstrap/alert";
 @import "vendor/bootstrap/progress";
@@ -56,3 +56,4 @@
 // Custom styles
 @import "base/core";
 @import "components/typography";
+@import "components/header";

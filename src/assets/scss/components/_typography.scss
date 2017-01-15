@@ -6,10 +6,5 @@ Typography
 
 @font-face {
     font-family: "Millerdisplay-light";
-    src: url('../assets/fonts/millerdisplay-light.ttf') format("truetype");
-}
-
-.header-text {
-  font-family: 'Millerdisplay-light';
-  color: #fff;
+    src: url('/assets/fonts/millerdisplay-light.ttf') format("truetype");
 }

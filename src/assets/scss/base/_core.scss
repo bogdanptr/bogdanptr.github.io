@@ -9,14 +9,33 @@ Core
 }
 
 html {
-  font-size: 16px;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) { // 1
+  html {
+    font-size: 16px;
+  }
 }
 
 body {
   background-color: #0b0c11;
   font-family: 'Roboto';
-  font-size: 1rem;
   line-height: 1.5;
   color: #fff;
   margin: 0;
+}
+
+.logo {
+  stroke: #fff;
+  margin: 1rem;
+}
+
+.social-icon {
+  margin: .5em;
+  color: rgba(255,255,255,0.4);
+
+  &:hover {
+    color: rgba(255,255,255,1);
+  }
 }

@@ -1,7 +1,7 @@
 @supports (display: flex) {
   .topHero {
     &--full {
-      min-height: 100vh;
+      min-height: calc(100vh - 80px);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -14,5 +14,26 @@
         min-height: calc(100vh - 80px);
       }
     }
+  }
+}
+
+.mainHeader {
+
+  &__title {
+    font-family: 'Millerdisplay-light';
+    color: #fff;
+    font-size: 5rem;
+  }
+
+  &__content {
+    margin: 1rem;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .mainHeader__title {
+    font-size: 3rem;
   }
 }

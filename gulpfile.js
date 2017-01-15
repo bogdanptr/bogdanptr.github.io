@@ -60,8 +60,7 @@ gulp.task('images', function() {
     .pipe(imagemin([
        imagemin.gifsicle(),
        imagemin.jpegtran({progressive: true}),
-       imagemin.optipng(),
-       imagemin.svgo()
+       imagemin.optipng()
      ]))
     .pipe(gulp.dest('dist/assets/img'))
     .pipe(browserSync.reload({

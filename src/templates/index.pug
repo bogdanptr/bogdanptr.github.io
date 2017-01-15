@@ -9,7 +9,20 @@ block vars
     }
 
 block content
-  header.header.text-center
+  header.mainHeader.text-center
     .topHero--full
-      h1.header-text.display-3 I design experiences
-      p.text-uppercased Launching Soon
+      .logo
+        svg(width="75" height="75")
+          use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons.svg#logo")
+      h1.mainHeader__title I design experiences
+      p.mainHeader__content Launching Soon
+  footer.mainFooter.text-center
+    a.social-icon(href="https://www.facebook.com/bogdanptr0")
+      svg(width="30" height="30")
+        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons.svg#twitter")
+    a.social-icon(href="https://twitter.com/bogdanptr")
+      svg(width="30" height="30")
+        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons.svg#instagram")
+    a.social-icon(href="https://www.instagram.com/bogdan.ptr/")
+      svg(width="30" height="30")
+        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons.svg#facebook")

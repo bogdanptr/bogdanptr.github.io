@@ -1,7 +1,10 @@
 @supports (display: flex) {
   .topHero {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
     &--full {
-      min-height: calc(100vh - 80px);
+      min-height: calc(100vh - 69px);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -11,24 +14,47 @@
   @media screen and (max-width: 1024px) {
     .topHero {
       &--full {
-        min-height: calc(100vh - 80px);
+        min-height: calc(100vh - 73px);
       }
     }
   }
 }
 
 .mainHeader {
+  background-image: url(/assets/img/dots-bg.svg);
 
   &__title {
-    font-family: 'Millerdisplay-light';
-    color: #fff;
-    font-size: 5rem;
+    font-family: 'Roboto';
+    color: map-get($color, black);
+    font-size: 6rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+
+    &--activity {
+      background-color: map-get($color, mainColor);
+      margin: 0 1rem;
+      padding: 1rem 2rem;
+      color: #fff;
+    }
   }
 
   &__content {
     margin: 1rem;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.3);
+    color: rgba(0,0,0,0.3);
+  }
+}
+
+.topBar {
+  padding-top: 2rem;
+}
+
+.mainLogo {
+  fill: map-get($color, black);
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 1;
   }
 }
 

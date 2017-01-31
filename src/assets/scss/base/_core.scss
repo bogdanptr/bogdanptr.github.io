@@ -19,10 +19,10 @@ html {
 }
 
 body {
-  background-color: #0b0c11;
+  background-color: #fff;
   font-family: 'Roboto';
   line-height: 1.5;
-  color: #fff;
+  color: map-get($color, black);
   margin: 0;
 }
 

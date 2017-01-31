@@ -1,0 +1,30 @@
+/*
+* Section layout
+*/
+
+.section {
+  margin: 4em 0;
+
+  &-highlight {
+    font-size: 200%;
+    font-weight: 600;
+  }
+
+  &__aboutme {
+    position: relative;
+    // background-image: url(/assets/img/aboutme-bg.svg);
+    // background-repeat: no-repeat;
+    // background-position: bottom;
+
+    &--img {
+      position: absolute;
+      z-index: -1;
+      bottom: -50px;
+      width: 100%;
+    }
+
+    &--content {
+      z-index: 1;
+    }
+  }
+}

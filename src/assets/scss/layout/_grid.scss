@@ -1,0 +1,12 @@
+/*
+* Grid
+*/
+@import "base/vars";
+
+.container {
+  width: 100%;
+  padding-left: $gutter / 4;
+  padding-right: $gutter / 4;
+  margin-left: auto;
+  margin-right: auto;
+}

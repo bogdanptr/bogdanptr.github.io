@@ -1,52 +1,48 @@
 @supports (display: flex) {
-  .topHero {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    min-height: calc(100vh - 72px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    &--full {
-      min-height: calc(100vh - 69px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    &__nav {
+      min-height: 100vh;
     }
   }
 
   @media screen and (max-width: 1024px) {
-    .topHero {
-      &--full {
-        min-height: calc(100vh - 73px);
-      }
+    .hero {
+      min-height: calc(100vh - 73px);
     }
   }
 }
 
 .mainHeader {
-  background-image: url(/assets/img/dots-bg.svg);
 
-  &__title {
-    font-family: 'Roboto';
-    color: map-get($color, black);
-    font-size: 6rem;
-    font-weight: 600;
-    padding-bottom: 1rem;
+  &__name {
+    font-family: 'Raleway';
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.2);
 
-    &--activity {
-      background-color: map-get($color, mainColor);
-      margin: 0 1rem;
-      padding: 1rem 2rem;
-      color: #fff;
-    }
   }
 
   &__content {
-    margin: 1rem;
-    text-transform: uppercase;
-    color: rgba(0,0,0,0.3);
+    font-family: 'Lora';
+    color: map-get($color, black);
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    font-weight: 400;
   }
 }
 
 .topBar {
   padding-top: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .mainLogo {
@@ -55,11 +51,5 @@
 
   &:hover {
     opacity: 1;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .mainHeader__title {
-    font-size: 3rem;
   }
 }

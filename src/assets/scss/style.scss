@@ -1,5 +1,6 @@
 // Normalize
 @import "vendor/normalize";
+@import "vendor/flexboxgrid";
 
 // Base
 @import "base/vars";
@@ -10,6 +11,7 @@
 @import "components/header";
 @import "components/gallery";
 @import "components/helpers";
+@import "components/nav";
 
 // Layout
 @import "layout/section";

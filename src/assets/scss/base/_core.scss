@@ -20,7 +20,7 @@ html {
 
 body {
   background-color: #fff;
-  font-family: 'Roboto';
+  font-family: 'Raleway';
   line-height: 1.5;
   color: map-get($color, black);
   margin: 0;
@@ -38,4 +38,9 @@ body {
   &:hover {
     color: rgba(255,255,255,1);
   }
+}
+
+.site-wrap {
+  position: relative;
+  padding: 0;
 }

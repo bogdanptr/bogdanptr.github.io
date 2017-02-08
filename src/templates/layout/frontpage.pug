@@ -5,14 +5,16 @@ html(lang="en")
   body
     include /includes/symbols.svg
 
-    header.mainHeader
-      .container
-        .topBar
-          a.mainLogo(href="/" aria-label="Logo")
-            svg(width="30" height="30")
-              use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#logo")
-        .topHero.topHero--full
-          block header
+    .site-wrap
+      header.mainHeader
+        .container
+          .topBar
+            include /includes/header.pug
+          include /includes/extended-nav.pug
+          .hero
+            block header
 
-    div(role="main", id="content", class="mainContent")
-      block content
+      div(role="main", id="content", class="mainContent")
+        block content
+
+    include /includes/foot

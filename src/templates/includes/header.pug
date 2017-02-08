@@ -1,0 +1,14 @@
+- var classPrefix = "menu";
+
+.row.center-xs
+  .col-xs.start-xs
+    a.mainLogo(href="/" aria-label="Logo")
+      svg(width="30" height="30")
+        use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#logo")
+  .col-xs.end-xs
+    nav(class = classPrefix)
+      button(class = classPrefix + "__toggle")
+        span(class = classPrefix + "__toggle__bar")
+        span(class = classPrefix + "__toggle__bar")
+        span(class = classPrefix + "__toggle__bar")
+        span.sr-only Menu

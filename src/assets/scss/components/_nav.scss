@@ -1,0 +1,90 @@
+.menu__toggle {
+  cursor: pointer;
+  background-color: #fff;
+  border: 0;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  outline: 0;
+
+  &__bar {
+    display: block;
+    width: 20px; height: 2px;
+    background-color: map-get($color, black);
+    transition: .15s cubic-bezier(0.75, -0.55, 0.25, 1.55);
+
+    & + & {
+      margin-top: 4px;
+    }
+  }
+}
+
+.menu__toggle--active {
+  .menu__toggle__bar {
+    margin: 0;
+    position: absolute;
+
+    &:nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.menu__nav {
+
+  &--item {
+    font-family: 'Lora';
+    margin: .5rem 0;
+    transition: ease-in .2s;
+
+    a {
+      text-decoration: none;
+      color: map-get($color, black);
+    }
+
+    &Top a {
+      font-size: 2rem;
+    }
+
+    &:hover {
+      opacity: .3;
+    }
+
+    &Bottom a {
+      font-family: 'Raleway';
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .8rem;
+      font-weight: 700;
+      opacity: .5;
+    }
+  }
+}
+
+.extended-nav {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.95);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: none;
+
+  &__full {
+    overflow: hidden !important;
+  }
+
+  &__active {
+    display: block;
+  }
+}

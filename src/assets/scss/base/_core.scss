@@ -20,27 +20,12 @@ html {
 
 body {
   background-color: #fff;
-  font-family: 'Raleway';
+  font-family: 'Roboto Condensed';
   line-height: 1.5;
   color: map-get($color, black);
   margin: 0;
 }
 
-.logo {
-  stroke: #fff;
-  margin: 1rem;
-}
-
-.social-icon {
-  margin: .5em;
-  color: rgba(255,255,255,0.4);
-
-  &:hover {
-    color: rgba(255,255,255,1);
-  }
-}
-
 .site-wrap {
   position: relative;
-  padding: 0;
 }

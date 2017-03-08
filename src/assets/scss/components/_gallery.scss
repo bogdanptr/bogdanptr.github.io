@@ -3,9 +3,3 @@
 */
 
 @import "base/vars";
-
-.work {
-  &__wrapper {
-    border: 4px solid map-get($color, black);
-  }
-}

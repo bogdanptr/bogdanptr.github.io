@@ -27,6 +27,14 @@
   margin-top: 0 !important;
 }
 
+.m0 {
+  margin: 0 !important;
+}
+
+.p0 {
+  padding: 0 !important;
+}
+
 // ARIA
 .sr-only {
   position: absolute;
@@ -44,4 +52,10 @@
   list-style: none;
   text-decoration: none;
   padding: 0;
+}
+
+// Images
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }

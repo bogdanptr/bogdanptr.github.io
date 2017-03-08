@@ -1,55 +1,45 @@
-@supports (display: flex) {
-  .hero {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    min-height: calc(100vh - 72px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/*
+* Header
+*/
 
-    &__nav {
-      min-height: 100vh;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    .hero {
-      min-height: calc(100vh - 73px);
-    }
-  }
-}
+@import "base/vars";
 
 .mainHeader {
+  padding: 3rem;
+  margin-bottom: $space * .5rem;
+}
 
-  &__name {
-    font-family: 'Raleway';
-    font-size: 1rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: rgba(0,0,0,0.2);
+.nav {
 
+  a:not(:last-child){
+    margin-right: 2rem;
   }
 
-  &__content {
-    font-family: 'Lora';
-    color: map-get($color, black);
-    font-size: 3rem;
-    padding-bottom: 1rem;
+  a {
+    text-decoration: none;
+  }
+}
+
+.header {
+
+  &__title {
+    font-family: 'Vidaloka';
+    width: 50%;
     font-weight: 400;
+    margin: 0 auto;
   }
-}
 
-.topBar {
-  padding-top: 2rem;
-  position: relative;
-  z-index: 2;
-}
+  &__highlight {
+    position: relative;
 
-.mainLogo {
-  fill: map-get($color, black);
-  opacity: 0.3;
-
-  &:hover {
-    opacity: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: lighten(map-get($color, blue), 10%);
+      height: 1rem;
+      width: 100%;
+      bottom: 0;
+      z-index: -1;
+    }
   }
 }

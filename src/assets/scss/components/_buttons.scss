@@ -9,15 +9,19 @@
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: 2px solid transparent;
-  padding: .3rem 1.3rem;
-  font-size: 1rem;
+  padding: .7rem 1.3rem;
+  font-size: .9rem;
   transition: all .2s ease-in-out;
+  border: 2px solid map-get($color, black);
   color: map-get($color, black);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
 }
 
 .btn--primary {
-  border-color: map-get($color, black);
+  background-color: #fff;
   box-shadow: 5px 5px 0 -2px #fff,
               5px 5px 0 0 map-get($color, black);
 

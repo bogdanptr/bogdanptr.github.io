@@ -6,7 +6,7 @@
 
 .mainHeader {
   padding: 3rem;
-  margin-bottom: $space * .5rem;
+  margin-bottom: $space * .25rem;
 }
 
 .nav {
@@ -14,18 +14,13 @@
   a:not(:last-child){
     margin-right: 2rem;
   }
-
-  a {
-    text-decoration: none;
-  }
 }
 
 .header {
 
   &__title {
-    font-family: 'Vidaloka';
-    width: 50%;
-    font-weight: 400;
+    font-family: 'Playfair Display';
+    font-weight: 700;
     margin: 0 auto;
   }
 

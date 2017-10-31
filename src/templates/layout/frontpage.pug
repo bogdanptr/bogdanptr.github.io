@@ -4,14 +4,12 @@ html(lang="en")
     include /includes/head.pug
   body
     include /includes/symbols.svg
-    .site-wrap
 
-      header.mainHeader
-        include /includes/header.pug
+    nav.mainNav
+      include /includes/main-nav.pug
 
-        block header
-
-      div(role="main", id="content", class="mainContent")
+    div(role="main", id="content", class="mainContent")
+      .container
         block content
 
     include /includes/foot

@@ -9,28 +9,24 @@ block vars
     }
 
 block content
-  .container
-    section
-      h1.h0.header__title.text--center I am passionate
-        br
-        span.header__highlight about design
-      img(src="/assets/img/hr.svg").img-fluid.divider
-    section
-      .row
-        .col-md-6
-          .bio.text--right
-            p Hello, i am Bogdan Petrescu, a designer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue dui, volutpat a ante in, interdum pulvinar augue. Nulla facilisi. Maecenas in augue commodo, aliquam odio a.Nulla facilisi. Maecenas in augue commodo, aliquam odio a.Nulla facilisi.
-            a(href="/").btn.btn--primary More about me
-          .gallery
-            a(href="/").gallery--item
-              .gallery--item__heading Test
-          .gallery
-            a(href="/").gallery--item
-              .gallery--item__heading Test
-        .col-md-6
-          .gallery
-            a(href="/").gallery--item
-              .gallery--item__heading Test
-          .gallery
-            a(href="/").gallery--item
-              .gallery--item__heading Test
+
+  a.logo(href="/" aria-label="Logo")
+    svg(width="30" height="30")
+      use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#logo")
+  p.small 👋 &nbsp; I am Bogdan, a designer
+  h1.h0.mt0 I love creating digital products that solve real problems
+  .grid.grid--gutter
+    .grid__col--67
+      .about__info
+        p.mt0 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut volutpat est. Mauris ornare nulla eu arcu sagittis hendrerit. 
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut volutpat est. Mauris ornare nulla eu arcu sagittis hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut volutpat est. Mauris ornare nulla eu arcu sagittis hendrerit. 
+
+      hr
+
+      .about__social
+        a.small(href="https://twitter.com/bogdanptr") Twitter.
+        a.small(href='https://dribbble.com/bogdanptr') Dribbble.
+        a.small(href="https://www.instagram.com/bogdan.ptr/") Instagram.
+
+    .grid__col--33
+      img(src="/assets/img/profile.jpg").img-fluid.about__pic

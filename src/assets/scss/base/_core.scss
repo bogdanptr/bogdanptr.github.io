@@ -9,23 +9,94 @@ Core
 }
 
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media screen and (min-width: 768px) { // 1
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 body {
-  background-color: #fff;
-  font-family: 'Source Sans Pro';
+  background: #030303;
+  background-image: url(/assets/img/topography.svg);
+  font-family: 'Lato', sans-serif;
   line-height: 1.25;
-  color: map-get($color, black);
+  color: #fff;
   margin: 0;
 }
 
-.site-wrap {
-  position: relative;
+.wrapper {
+  background-color: map-get($color, black);
+  margin-left: 3rem;
+  margin-right: 3rem;
+
+  &::after {
+    content: "";
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.9));
+    z-index: 1;
+  }
+}
+
+.mainContent {
+  margin-top: 4rem;
+}
+
+.logo {
+  fill: #fff;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.about {
+
+  &__info {
+    font-weight: 300;
+  }
+
+  &__pic {
+    border-radius: 50%;
+  }
+
+  &__social {
+    a {
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      color: #fff;
+      
+
+      &:hover {
+        color: map-get($color, yellow);
+      }
+    }
+  }
+}
+
+hr, .hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-color: rgba(255,255,255,0.1);
+}
+
+@supports (display: flex) {
+  .topHero--full {
+    min-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+  }
+
+  @media screen and (max-width: 1024px) {
+    .topHero--full {
+      min-height:calc(100vh - 80px)
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about__pic {
+    display: none;
+  }
 }

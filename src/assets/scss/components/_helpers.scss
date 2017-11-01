@@ -15,10 +15,14 @@
   &--center {
     text-align: center;
   }
+
+  &--muted {
+    opacity: .4;
+  }
 }
 
 .small {
-  font-size: 90% !important;
+  font-size: 80% !important;
 }
 
 // Spacing

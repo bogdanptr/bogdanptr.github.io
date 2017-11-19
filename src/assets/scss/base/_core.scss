@@ -27,7 +27,7 @@ html {
 body {
   background: #030303;
   // background-image: url(/assets/img/topography.svg);
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
   line-height: 1.25;
   color: #fff;
   margin: 0;
@@ -64,17 +64,29 @@ body {
   &__pic {
     position: relative;
 
-    &::after {
+    &::before {
       content: "";
       background-image: url(/assets/img/dot.svg);
       background-size: 10px;
       position: absolute;
       z-index: -1;
-      right: -18px;
-      bottom: -18px;
+      right: -1.2rem;
+      bottom: -1rem;
       width: 100%;
       height: 100%;
-      opacity: .3;
+      opacity: .4;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-left: 1px solid map-get($color, #fff);
+      border-top: 1px solid map-get($color, #fff);
+      z-index: -2;
+      left: -1rem;
+      top: -1rem;
     }
   }
 

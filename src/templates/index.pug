@@ -12,21 +12,19 @@ block content
   .about__pic
     img(src="/assets/img/profile2.jpg" alt="Picture of myself").img-fluid
 
-  a.logo(href="/" aria-label="Personal logo")
-    svg(width="30" height="30")
-      use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#logo")
-  .grid.grid--gutter.grid--middle
-    .grid__col--67
-      p.mt0 👋 &nbsp;I am Bogdan, a #[abbr(title='Someone who is solving problems through design and code.') product designer]
-      h1.h0.mt0 I am creating digital products
-      .about__info
-        p.mt0 I am a self-taught designer and front-end developer based in Romania. I am passionate about solving problems through use of design and technological implementations. I put a strong emphasis on user experience, responsive web design and web accessibility.
-        p Currently working at #[a(href='http://www.caphyon.com/') Caphyon]
+  section.about
+    p.mt0 👋 &nbsp;I am Bogdan, a #[abbr(title='Someone who is solving problems through design and code.') product designer]
+    h1.h0.mt0 I am creating digital products
+    .about__info
+      p.mt0 I am a self-taught designer and front-end developer based in Romania. I am passionate about solving problems through use of design and technological implementations. I put a strong emphasis on user experience, responsive web design and web accessibility.
+      p Currently working at #[a(href='http://www.caphyon.com/') Caphyon]
 
-      .about__social
-        p.small.text--muted Thanks for stopping by!
+  section.about__social
+    p.small.text--muted.mt0 Where you can reach me out
+    ul.list-unstyled
+      li
         a.small(href="https://twitter.com/bogdanptr") Twitter.
+      li
         a.small(href='https://dribbble.com/bogdanptr') Dribbble.
+      li
         a.small(href="https://www.instagram.com/bogdan.ptr/") Instagram.
-
-    .grid__col--33

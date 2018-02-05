@@ -44,13 +44,16 @@ body {
   }
 }
 
-.mainContent {
+.mainNav {
   margin-top: 4rem;
+}
+
+.mainContent {
+  margin-top: 2rem;
 }
 
 .logo {
   fill: #fff;
-  margin-bottom: 2rem;
   display: inline-block;
 }
 
@@ -70,9 +73,13 @@ body {
   }
 
   &__social {
+    text-align: right;
+
+    li {
+      margin-bottom: .5rem;
+    }
 
     a {
-      margin-right: 1rem;
       text-decoration: none;
       color: #fff;
 
@@ -107,5 +114,9 @@ hr, .hr {
 @media screen and (max-width: 768px) {
   .about__pic {
     display: none;
+  }
+
+  .about__social {
+    text-align: left;
   }
 }

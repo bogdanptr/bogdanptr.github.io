@@ -57,6 +57,25 @@ body {
   display: inline-block;
 }
 
+.wave {
+  animation: wave-animation .7s ease infinite;
+  transform-origin: bottom center;
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(25deg);
+  }
+}
+
 .about {
 
   &__info {

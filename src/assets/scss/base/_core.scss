@@ -96,21 +96,6 @@ hr, .hr {
   border-color: rgba(255,255,255,0.1);
 }
 
-@supports (display: flex) {
-  .topHero--full {
-    min-height: calc(100vh - 50px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center
-  }
-
-  @media screen and (max-width: 1024px) {
-    .topHero--full {
-      min-height:calc(100vh - 80px)
-    }
-  }
-}
-
 @media screen and (max-width: 768px) {
   .about__pic {
     display: none;

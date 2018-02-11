@@ -12,13 +12,6 @@ block content
   .about__pic
     img(src="/assets/img/profile2.jpg" alt="Picture of myself").img-fluid
 
-  section.content
-    p.mt0 #[span.wave 👋] I am Bogdan, a #[abbr(title='Someone who is solving problems through design and code.') product designer]
-    h1.h0.mt0 I am creating digital products
-    .about__info
-      p.mt0 I am a self-taught designer and front-end developer based in Romania. I am passionate about solving problems through use of design and technological implementations. I put a strong emphasis on user experience, responsive web design and web accessibility.
-      p Currently working at #[a(href='http://www.caphyon.com/') Caphyon]
-
   aside
     p.small.text--muted.mt0 Where you can reach me out
     ul.list-unstyled
@@ -28,3 +21,30 @@ block content
         a.small(href='https://dribbble.com/bogdanptr') Dribbble.
       li
         a.small(href="https://www.instagram.com/bogdan.ptr/") Instagram.
+
+  .content
+    section.section
+      p.mt0 #[span.wave 👋] I am Bogdan, a #[abbr(title='Someone who is solving problems through design and code.') product designer]
+      h1.h0.mt0 I am creating digital products
+      p.mt0 I am a self-taught designer and front-end developer based in Romania. I am passionate about solving problems through use of design and technological implementations. I put a strong emphasis on user experience, responsive web design and web accessibility.
+      p Currently working at #[a(href='http://www.caphyon.com/') Caphyon]
+
+    section.section
+      h2.section__heading Projects
+      .project
+        .project__img(style="background-image: url('http://placehold.it/500x500')")
+        a(href="").project__info
+          h3.mt0 Awesome project name
+          p.small.mb0 Read more
+            span
+              svg(width="16" height="16")
+                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#right-arrow")
+
+      .project
+        .project__img(style="background-image: url('http://placehold.it/500x500')")
+        a(href="").project__info
+          h3.mt0 Awesome project name
+          p.small.mb0 Read more
+            span
+              svg(width="16" height="16")
+                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#right-arrow")

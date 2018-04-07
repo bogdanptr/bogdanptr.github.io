@@ -34,13 +34,10 @@ h6, .h6 {
 }
 
 a:not(.logo) {
-  text-decoration: none;
   color: currentColor;
-  border-bottom: 2px solid map-get($color, yellow);
   transition: .1s ease-in;
+}
 
-  &:hover {
-    background-color: map-get($color , yellow);
-    color: map-get($color, black) !important;
-  }
+.slim {
+  font-weight: 300 !important;
 }

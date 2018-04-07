@@ -5,7 +5,21 @@
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-areas: "nav work articles";
-  grid-gap: $gutter / 2;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "about work articles";
+}
+
+.about {
+  grid-area: about;
+  position: sticky;
+  height: 100vh;
+  top: 0;
+}
+
+.work {
+  grid-area: work;
+}
+
+.articles {
+  grid-area: articles;
 }

@@ -25,19 +25,10 @@ html {
 }
 
 body {
-  background: #030303;
   font-family: 'Roboto Mono', sans-serif;
   line-height: 1.25;
-  color: #fff;
+  color: #222;
   margin: 0;
-}
-
-.mainNav {
-  margin-top: 4rem;
-}
-
-.mainContent {
-  margin-top: 2rem;
 }
 
 .logo {
@@ -138,11 +129,13 @@ aside {
       h3 {
         text-decoration: underline;
       }
-
-      .project__img::before {
-        background-color: rgba(0,0,0,1);
-      }
     }
+  }
+}
+
+.project__info:hover {
+  .project__img {
+    background-size: 120%;
   }
 }
 

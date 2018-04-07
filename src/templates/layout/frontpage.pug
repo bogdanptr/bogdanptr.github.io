@@ -5,15 +5,14 @@ html(lang="en")
   body
     include /includes/symbols.svg
 
-    //- nav.mainNav
-    //-   include /includes/main-nav.pug
-
     .container
-      nav.mainNav
-        a.logo(href="/" aria-label="Personal logo")
-          svg(width="30" height="30")
-            use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#logo")
-      div(role="main", id="content", class="mainContent")
-        block content
+      nav.about
+        include /includes/main-nav.pug
+
+      section.work
+        block work
+
+      section.articles
+        block articles
 
     include /includes/foot

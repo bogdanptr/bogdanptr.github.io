@@ -4,46 +4,8 @@
 @import "base/vars";
 
 .container {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: $gutter / 2;
-  padding-right: $gutter / 2;
-}
-
-.mainNav {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  .logo {
-    grid-column: 1;
-  }
-}
-
-.mainContent {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "content content aside";
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "nav work articles";
   grid-gap: $gutter / 2;
-
-  .content {
-    grid-area: content;
-  }
-
-  aside {
-    grid-area: aside;
-    text-align: right;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .mainContent {
-    grid-template-areas:
-      "content content content"
-      "aside aside aside";
-
-    aside {
-      text-align: left;
-    }
-  }
 }

@@ -12,6 +12,12 @@ html {
   font-size: 16px;
 }
 
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 14.5px;
+  }
+}
+
 body {
   font-family: 'Roboto Mono', sans-serif;
   line-height: 1.25;
@@ -21,9 +27,23 @@ body {
 
 // Layout areas
 .about {
+  grid-area: about;
+  position: sticky;
+  height: 100vh;
+  top: 0;
   background-color: #141414;
   color: #fff;
   padding: 3rem 2rem;
+}
+
+.work {
+  grid-area: work;
+  padding: 0 2rem;
+}
+
+.articles {
+  grid-area: articles;
+  border-left: 1px solid #ccc;
 }
 
 .logo {
@@ -53,12 +73,14 @@ body {
 .section {
 
   &__heading {
-    color: map-get($color , yellow);
-    font-size: .7rem;
-    text-transform: uppercase;
-    letter-spacing: .5rem;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
+    font-size: .8rem;
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 3rem -2rem;
+    padding: 1rem 0 1rem 2rem;
+    position: sticky;
+    background-color: #fff;
+    top: 0;
+    z-index: 1;
   }
 }
 
@@ -86,10 +108,10 @@ body {
 
   &__info {
     position: absolute;
-    right: 0;
+    left: -2rem;
     bottom: -50px;
     max-width: 350px;
-    background-color: #fff;
+    background-color: #F0F0F0;
     color: map-get($color , black) !important;
     padding: 2rem;
 
@@ -111,14 +133,7 @@ body {
   }
 }
 
-.project__info:hover {
-  .project__img {
-    background-size: 120%;
-  }
-}
-
 .about {
-
   &__pic {
     position: fixed;
     bottom: 0;
@@ -126,6 +141,35 @@ body {
     opacity: .3;
     z-index: -1;;
     width: 300px;
+  }
+}
+
+.article__block {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+  text-align: right;
+  width: 100%;
+
+  &::after {
+    content: attr(data-category);
+    position: absolute;
+    writing-mode: vertical-rl;
+    background-color: #141414;
+    font-size: .8rem;
+    text-transform: uppercase;
+    top: 0;
+    right: 0;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: #F0F0F0;
+    text-decoration: underline;
   }
 }
 

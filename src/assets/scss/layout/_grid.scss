@@ -8,18 +8,3 @@
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-areas: "about work articles";
 }
-
-.about {
-  grid-area: about;
-  position: sticky;
-  height: 100vh;
-  top: 0;
-}
-
-.work {
-  grid-area: work;
-}
-
-.articles {
-  grid-area: articles;
-}

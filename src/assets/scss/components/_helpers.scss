@@ -17,7 +17,11 @@
   }
 
   &--muted {
-    opacity: .6;
+    opacity: .7;
+  }
+
+  &--strong {
+    font-weight: 600;
   }
 }
 
@@ -60,11 +64,17 @@
   text-decoration: none;
   padding: 0;
 
-  li {
-    display: inline-block;
+  &-v {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
 
-    &:not(:last-of-type) {
-      margin-right: 1rem;
+    li {
+      display: inline-block;
+
+      &:not(:last-of-type) {
+        margin-right: 1rem;
+      }
     }
   }
 }

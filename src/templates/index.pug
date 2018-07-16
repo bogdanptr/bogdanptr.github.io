@@ -2,34 +2,40 @@ extends /layout/frontpage
 
 //- Page specific vars
 block vars
-  -
-    page = {
-      title: "Bogdan Petrescu - Product Designer · Front-end Developer",
-      description: "Bogdan Petrescu - Product Designer · Front-end Developer"
-    }
+	-
+		page = {
+			title: "Bogdan Petrescu - Product Designer · Front-end Developer",
+			description: "Bogdan Petrescu - Product Designer · Front-end Developer"
+		}
 
-block work
-  section.section
-    h2.section__heading Selected projects
-    .project
-      .project__img(style="background-image: url('http://placehold.it/500x500')")
-      a(href="").project__info
-        h3.mt0 Awesome project name
-        p.small.mb0 Read more
-          span
-            svg(width="16" height="16")
-              use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#right-arrow")
+block content
+	.grid.grid--mb0
+		.grid__col--md12
+			h1.h0.mt0 Hi there, i am Bogdan,#[br] a product designer.
 
-    .project
-      .project__img(style="background-image: url('http://placehold.it/500x500')")
-      a(href="").project__info
-        h3.mt0 Awesome project name
-        p.small.mb0 Read more
-          span
-            svg(width="16" height="16")
-              use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#right-arrow")
+	.grid
+		.grid__col--md12.grid__col--lg6
+			p Self-taught product designer and front-end developer based in Romania. I am passionate about solving problems through use of design and technological implementations. I put a strong emphasis on user experience, responsive web design and web accessibility.
+			p Currently getting up in the morning to design stuff at #[a(href="https://www.caphyon.com/" class="highlight") Caphyon].
 
-block articles
-  h2.section__heading.mb0 Thoughts
-  a(href="#" data-category="Design").article__block.h4 A awesome article name
-  a(href="#" data-category="Design").article__block.h4 Also a awesome article but with a long name
+	section.work
+		.grid.grid--gutter
+			.grid__col--md4.grid__col--lg3
+				ul.list-unstyled.work__nav
+					li.work__section.work__section--active
+						h3 All
+					li.work__section.work__section--projects
+						h3 Projects
+					li.work__section.work__section--articles
+						h3 Articles
+
+			.grid__col--md8.grid__col--lg9
+				ul.list-unstyled.grid.grid--gutter
+					li.grid__col--md12.grid__col--xl6
+						a(href="/projects/redesign-awr.html").work__block.work__block--project
+							h3.mt0.mb0 Redesinging Advanced Web Ranking website
+							p.mb0 Little description about this awesome website redesign that i did for AWR.
+					li.grid__col--md12.grid__col--xl6
+						a(href="/").work__block.work__block--article
+							h3.mt0.mb0 Some thoughts about design sprints
+							p.mb0 A article about my oppinion of design sprints. Interesting details found inside. Check it out!

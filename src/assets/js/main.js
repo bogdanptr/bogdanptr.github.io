@@ -2,10 +2,20 @@
 
 $(document).ready(function () {
 
-  $(".menu__toggle").click(function() {
-    $(this).toggleClass("menu__toggle--active");
-    $(".extended-nav").toggleClass("extended-nav__active");
-    $("body").toggleClass("extended-nav__full");
-  });
+  $(".work__section").click(function() {
+    $(".work__section").removeClass("work__section--active");
+    $(this).addClass("work__section--active");
 
+    if($(this).hasClass("work__section--projects") ) {
+      $(".work__block--article").parents("li").hide();
+    } else {
+      $(".work__block--article").parents("li").show();
+    }
+
+    if ($(this).hasClass("work__section--articles")) {
+      $(".work__block--project").parents("li").hide();
+    } else {
+      $(".work__block--project").parents("li").show();
+    }
+  });
 });

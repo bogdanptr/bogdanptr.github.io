@@ -2,9 +2,15 @@
 ** Variables
 */
 
-// Colors
 // Grid
-
+$gutter: 30px !default;
+$grid-columns: 12 !default;
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1281px
+) !default;
 
 // Colors
 // map-get($color, black)
@@ -12,6 +18,3 @@ $color: (
   black: #0c0c0c,
   yellow: #FEDA00
 );
-
-// Grid
-$gutter: 30px;

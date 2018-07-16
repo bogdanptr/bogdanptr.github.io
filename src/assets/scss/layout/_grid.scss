@@ -3,8 +3,120 @@
 */
 @import "base/vars";
 
+// Core //
 .container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "about work articles";
+  max-width: 80em;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Flexbox Grid
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: $gutter;
+
+  &--gutter {
+    margin-right: -$gutter / 2;
+    margin-left: -$gutter / 2;
+
+    > [class*='grid__col--'] {
+      padding-right: $gutter / 2;
+      padding-left: $gutter / 2;
+    }
+  }
+}
+
+[class*='grid__col--'] {
+  position: relative;
+  width: 100%;
+  min-height: 1px; // Prevent collapsing
+}
+
+@each $name, $value in $grid-breakpoints {
+  @media screen and (min-width: #{$value}) {
+    @for $i from 1 through $grid-columns {
+      .grid__col--#{$name}#{$i} {
+        flex: 0 0 percentage($i / $grid-columns);
+        max-width: percentage($i / $grid-columns);
+      }
+      .grid__col--offset-#{$name}#{$i} {
+        width: $i * 10%;
+      }
+    }
+  }
+}
+
+// Modifiers
+.grid {
+  // Align grid items (aligning on Y axis)
+  &--vmiddle {
+    align-items: center;
+  }
+
+  // Justify grid items (aligning on X axis)
+  // Fallback for flexbox
+  &__justify {
+    &--center {
+      justify-content: center;
+    }
+
+    &--left {
+      justify-content: start;
+    }
+
+    &--right {
+      justify-content: end;
+    }
+  }
+
+  &--mb0 {
+    margin-bottom: 0;
+  }
+
+  &--pad {
+    .module {
+      padding: 20px;
+    }
+  }
+}
+
+.mainContent {
+  padding: 3rem;
+  margin: -1px 62px; // Hardcoded value for matching logo border lines
+  border-top: 1px solid rgba(0,0,0,.1);
+  border-left: 1px solid rgba(0,0,0,.1);
+}
+
+.mainFooter {
+  margin-top: 5rem;
+}
+
+@media screen and (max-width: 1281px) {
+
+  .mainContent {
+    margin: -1px 58px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .mainContent {
+    margin: -1px 58px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .mainNav {
+    margin-bottom: 2rem;
+  }
+
+  .mainContent {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
 }

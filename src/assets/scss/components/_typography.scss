@@ -2,7 +2,18 @@
 Typography
 */
 
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,600');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+.h0,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Playfair Display', serif;
+}
 
 .h0 {
  font-size: 3rem;
@@ -45,7 +56,7 @@ h6, .h6 {
     height: 7px;
     bottom: 0;
     z-index: -1;
-    background-image: linear-gradient(to right, #85FFDA,rgba(255,255,255,0.1));
+    background-image: linear-gradient(to right, map-get($color, green),rgba(255,255,255,0.1));
   }
 
   &:hover {

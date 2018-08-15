@@ -14,21 +14,26 @@ html {
 }
 
 body {
-  font-family: 'Playfair Display', serif;
-  color: #222;
+  font-family: -apple-system,
+              BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+              "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+              "Helvetica Neue", sans-serif;
+  color: #fff;
+  background-color: map-get($color, black);
   margin: 3rem;
 }
 
 .logo {
   display: inline-block;
-  border: 1px solid map-get($color, black);
+  border: 1px solid rgba(255,255,255,.3);
+  fill: #fff;
   padding: 1rem;
 
   &:hover {
-    background-color: map-get($color, black);
+    background-color: #fff;
 
     svg {
-      fill: #fff;
+      fill: map-get($color, black);
     }
   }
 }
@@ -45,7 +50,7 @@ svg {
   }
 
   &__section {
-    opacity: .5;
+    opacity: .3;
     cursor: pointer;
 
     &--active,
@@ -66,35 +71,39 @@ svg {
       &::before {
         content: attr(data-project);
         position: absolute;
-        top: -2rem;
+        top: -2.3rem;
         padding: .6rem;
         left: -5px;
       }
 
+      p {
+        opacity: .7;
+      }
+
     &--project {
-      border-color: #D8FFF6;
+      border-color: map-get($color, green);
 
       &:hover {
-        background-color: lighten(#D8FFF6, 2%);
+        background-color: rgba(66, 177, 150, .3);
       }
 
       &::before {
         content: "Project";
-        background-color: #D8FFF6;
+        background-color: map-get($color, green);
         font-size: .8rem;
       }
     }
 
     &--article {
-      border-color: #EAE2FF;
+      border-color: map-get($color, purple);
 
       &:hover {
-        background-color: lighten(#EAE2FF, 3%);
+        background-color: rgba(128, 105, 195, .3);
       }
 
       &::before {
         content: "Article";
-        background-color: #EAE2FF;
+        background-color: map-get($color, purple);
         font-size: .8rem;
       }
     }

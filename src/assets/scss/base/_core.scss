@@ -143,13 +143,25 @@ svg {
 }
 
 .disabled {
-  opacity: .5;
-  cursor: not-allowed;
+  position: relative;
+
+  &::after {
+    content: "Coming soon";
+    position: absolute;
+    text-transform: uppercase;
+    left: 5.5rem;
+    top: 2.4rem;
+    font-size: .8rem;
+    letter-spacing: 1px;
+  }
 
   .work__block--project,
   .work__block--article {
+    opacity: .5;
+
     &:hover {
       background-color: transparent;
+      cursor: not-allowed;
     }
   }
 }

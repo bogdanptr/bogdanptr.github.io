@@ -141,3 +141,15 @@ svg {
     margin: 1rem;
   }
 }
+
+.disabled {
+  opacity: .5;
+  cursor: not-allowed;
+
+  .work__block--project,
+  .work__block--article {
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 /*
-* Helpers
+Helpers
 */
 
 // Text helpers
@@ -16,12 +16,20 @@
     text-align: center;
   }
 
-  &--muted {
-    opacity: .7;
+  &--slim {
+    font-weight: 300 !important;
   }
 
-  &--strong {
-    font-weight: 600;
+  &--normal {
+    font-weight: 400 !important;
+  }
+
+  &--muted {
+    color: #b3b3b3;
+  }
+
+  &--small {
+    font-size: 80%;
   }
 }
 
@@ -59,22 +67,20 @@
 }
 
 // Lists
-.list-unstyled {
+.list-unstyled,
+.list-unstyled--v {
   list-style: none;
   text-decoration: none;
   padding: 0;
+  margin: 0;
+}
 
-  &-v {
-    list-style: none;
-    text-decoration: none;
-    padding: 0;
+.list-unstyled--v {
+  li {
+    display: inline-block;
 
-    li {
-      display: inline-block;
-
-      &:not(:last-of-type) {
-        margin-right: 1rem;
-      }
+    &:not(:last-of-type) {
+      margin-right: 1rem;
     }
   }
 }

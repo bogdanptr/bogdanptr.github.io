@@ -2,21 +2,12 @@
 Typography
 */
 
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,600');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
-
-.h0,
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  font-family: 'Playfair Display', serif;
-}
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif:300,400,700');
 
 .h0 {
- font-size: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 h1, .h1 {
@@ -43,34 +34,16 @@ h6, .h6 {
   font-size: 1rem;
 }
 
-.highlight {
-  color: currentColor;
-  text-decoration: none;
-  position: relative;
-  transition: 1s ease;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 7px;
-    bottom: 0;
-    z-index: -1;
-    background-image: linear-gradient(to right, map-get($color, green),rgba(255,255,255,0.1));
-  }
-
-  &:hover {
-    &::before {
-      height: 100%;
-    }
-  }
+.h0,
+.h1, h1,
+.h2, h2,
+.h3, h3,
+.h4, h4,
+.h5, h5,
+.h6, h6 {
+  font-family: 'IBM Plex Serif', serif;
 }
 
-a {
-  color: currentColor;
-  text-decoration: none;
-}
-
-.slim {
-  font-weight: 300 !important;
+h2 + p {
+  margin-top: .5rem; // selected project hardcoded margin
 }

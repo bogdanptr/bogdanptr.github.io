@@ -2,40 +2,42 @@ extends /layout/frontpage
 
 //- Page specific vars
 block vars
-	-
-		page = {
-			title: "Bogdan Petrescu - Product Designer · Front-end Developer",
-			description: "Bogdan Petrescu - Product Designer · Front-end Developer"
-		}
+  -
+    page = {
+      title: "Bogdan Petrescu - Product Designer · Front-end Developer",
+      description: "Bogdan Petrescu - Product Designer · Front-end Developer"
+    }
+
+block header
+  .profile
+  .bio
+    h1.h0.mb0.mt0 Bogdan Petrescu.
+    h1.h0.text--slim.mt0 a designer crafting#[br]digital experiences
+    //- p Self-taught product designer and front-end developer based in Romania. I am passionate about solving problems through use of design and technological implementations. I put a strong emphasis on user experience, responsive web design and web accessibility.
+    //- p Currently getting up in the morning to design stuff at #[a(href="https://www.caphyon.com/") Caphyon].
+    p.text--muted Read more #[a(href="#") about me] or check out some of my #[a(href="#selected-projects") selected projects].
 
 block content
-	.grid.grid--mb0
-		.grid__col--md12
-			h1.h0.mt0.mb0 Hi there, I am Bogdan,#[br] a product designer.
+  #selected-projects.pattern-block.pattern-block--left
+    .container
+      section
+        .section-scroller.section-scroller--right(data-section="Selected projects")
+          span
+        a(href="#").project
+          .project__info
+            h2.project__info--title.mt0.mb0 Advanced Web Ranking
+            p.mb0 Redefining ranking.
+            p.mt0.text--muted.mb0 ui/ux design / prototype / development
+          p.project__date 2016 - Ongoing
 
-	.grid
-		.grid__col--md12.grid__col--lg6
-			p Self-taught product designer and front-end developer based in Romania. I am passionate about solving problems through use of design and technological implementations. I put a strong emphasis on user experience, responsive web design and web accessibility.
-			p Currently getting up in the morning to design stuff at #[a(href="https://www.caphyon.com/" class="highlight") Caphyon].
+        a(href="").project.project--disabled
+          .project__info
+            h2.project__info--title.mt0.mb0 AWRStudyr
+            p.mb0 Coming soon!
+          p.project__date 2018
 
-	section.work
-		.grid.grid--gutter
-			.grid__col--md4.grid__col--lg3
-				ul.list-unstyled.work__nav
-					li.work__section.work__section--active
-						h3 All
-					li.work__section.work__section--projects
-						h3 Projects
-					li.work__section.work__section--articles
-						h3 Articles
-
-			.grid__col--md8.grid__col--lg9
-				ul.list-unstyled.grid.grid--gutter
-					li.grid__col--md12.grid__col--xl6.disabled
-						span.work__block.work__block--project
-							h3.mt0.mb0 AWRStudyr 2.0
-							p.mb0.small Little description about this awesome browser extension redesign that i did for AWRStudyr.
-					li.grid__col--md12.grid__col--xl6
-						a(href="/projects/redesign-awr.html").work__block.work__block--project
-							h3.mt0.mb0 Redesinging Advanced Web Ranking website
-							p.mb0.small Little description about this awesome website redesign that i did for AWR.
+  .container
+    section
+      .section-scroller.section-scroller--left(data-section="More shots")
+        span
+      ul#dribbbleShots.list-unstyled

@@ -1,0 +1,198 @@
+/*
+Project presentation
+*/
+
+.project {
+  margin: 4rem 0;
+  text-decoration: none;
+
+  &__info {
+
+    &--title {
+      position: relative;
+      display: inline-block;
+      z-index: 2;
+
+      overflow: hidden;
+      padding: 0 .5rem;
+      margin-left: -.5rem;
+
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 50%;
+        width: 40%;
+        background: rgba(0,0,0,0.2);
+        z-index: -1;
+        transition: .2s ease-in all;
+      }
+    }
+  }
+
+  &__date {
+    justify-self: right;
+    margin-top: .5rem;
+  }
+
+  &:hover {
+
+    .project__info--title::before {
+      left: 60%;
+      width: 40%;
+      background: rgba(0,163,255,.7);
+    }
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    opacity: .4;
+
+    .project__info--title {
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+}
+
+#dribbbleShots {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.section-scroller {
+  position: absolute;
+  top: -2rem;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+
+  &::before {
+    content: attr(data-section);
+    position: absolute;
+    top: -1.1rem;
+    background-color: #fff;
+    padding: .5rem;
+    padding-left: 0;
+    font-size: .8rem;
+    font-weight: bold;
+    z-index: 2;
+  }
+
+  span {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(0,0,0,.1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 2px;
+      width: 50px;
+      background-color: map-get($color, black);
+      animation: scroller 2s linear infinite;
+    }
+  }
+}
+
+@keyframes scroller {
+  0% { left: 0;}
+  100% { left: 100%;} // bar hardcoded height
+}
+
+// Media breakpoints
+@media screen and (min-width: 769px) {
+
+  // Selected projects
+  .project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  // Scroller
+  .section-scroller {
+    top: 0;
+
+    &::before {
+      writing-mode: vertical-lr;
+      top: 0;
+      padding: .5rem 0;
+    }
+
+    span {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      height: 400px;
+      width: 2px;
+      background-color: rgba(0,0,0,.1);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8rem;
+        height: 50px;
+        width: 2px;
+        background-color: map-get($color, black);
+        animation: scroller 2s linear infinite;
+      }
+    }
+
+    &--right {
+      &::before {
+        right: -3.6rem;
+      }
+
+      span {
+        right: -3rem;
+      }
+    }
+
+    &--left {
+      &::before {
+        left: -3.4rem;
+      }
+
+      span {
+        left: -3rem;
+      }
+    }
+  }
+
+  @keyframes scroller {
+    0% { top: 0;}
+    100% { top: 100%;} // bar hardcoded height
+  }
+
+  // Dribbble shots
+  #dribbbleShots {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dribbble-shot {
+    will-change: transition;
+    filter: grayscale(100%);
+    transition: .3s ease-in-out;
+
+    &:hover {
+      filter: grayscale(0);
+      transform: scale(.95);
+    }
+
+    &:nth-child(odd) {
+      margin-top: 5rem;
+      margin-bottom: -5rem;
+    }
+  }
+}

@@ -1,21 +1,23 @@
 // Main js file
 
-$(document).ready(function () {
+// Set the Access Token
+var accessToken = '8952e3f6bc05276d909eaaffca5407d07b3d10a26e980abd53b1fd6aefdc3b2d';
 
-  $(".work__section").click(function() {
-    $(".work__section").removeClass("work__section--active");
-    $(this).addClass("work__section--active");
-
-    if($(this).hasClass("work__section--projects") ) {
-      $(".work__block--article").parents("li").hide();
-    } else {
-      $(".work__block--article").parents("li").show();
+// Call Dribble v2 API
+$.ajax({
+    url: 'https://api.dribbble.com/v2/user/shots?access_token='+accessToken + '&per_page=6',
+    dataType: 'json',
+    type: 'GET',
+    success: function(data) {
+      if (data.length > 0) {
+        $.each(data.reverse(), function(i, val) {
+          $('#dribbbleShots').prepend(
+            '<li class="dribbble-shot"><a class="" target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><img src="'+ val.images.hidpi +'" class="img-fluid" height="300"/></a></li>'
+            )
+        })
+      }
+      else {
+        $('#dribbbleShots').append('<p>No shots yet!</p>');
+      }
     }
-
-    if ($(this).hasClass("work__section--articles")) {
-      $(".work__block--project").parents("li").hide();
-    } else {
-      $(".work__block--project").parents("li").show();
-    }
-  });
 });

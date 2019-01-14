@@ -64,9 +64,26 @@ svg {
 }
 
 .mainFooter {
-  padding: 7rem 0;
-  margin-bottom: -2rem;
-  text-align: center;
+  margin: 2rem 0;
+
+  &__cta {
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+
+    &--mail {
+      position: relative;
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0 .5rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
 }
 
 a {
@@ -150,6 +167,10 @@ hr {
 }
 
 @media screen and (min-width: 1281px) {
+  html {
+    font-size: 20px;
+  }
+
   .container {
     max-width: 1120px;
   }

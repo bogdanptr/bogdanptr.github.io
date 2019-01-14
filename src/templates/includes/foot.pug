@@ -1,17 +1,23 @@
 block foot
-  .container
-    .mainFooter--mail
-      h3.mt0 Interested in talking? #[br] Let's have a chat!
-      a(href="mailto:me@bogdanpetrescu.com" title="Email Bogdan Petrescu") me@bogdanpetrescu.com
+  .pattern-block.pattern-block--right
+    .mainFooter__cta
+      .container.text--center
+        h3.mt0.mb0 Interested about design? #[br] Let's have a chat!
+        a(href="mailto:me@bogdanpetrescu.com" title="Email Bogdan Petrescu").mainFooter__cta--mail me@bogdanpetrescu.com
 
-    .mainFooter--social
-      ul.list-unstyled--v.mb0
+  .container
+    hr
+    .mainFooter__social
+      ul.list-unstyled--v.mb0.text--small
         li
           a(href="https://twitter.com/bogdanptr" target="_blank" rel="noopener noreferrer") Twitter
+
         li
           a(href="https://dribbble.com/bogdanptr" target="_blank" rel="noopener noreferrer") Dribbble
+
         li
           a(href="https://www.instagram.com/bogdan.ptr/" target="_blank" rel="noopener noreferrer") Instagram
+      p.mt0.mb0.text--small.text--muted Bogdan Petrescu, 2019
 
   script(src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
   script(src = "/assets/js/main.js")

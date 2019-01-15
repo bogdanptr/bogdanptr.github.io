@@ -99,7 +99,7 @@ Project presentation
       height: 2px;
       width: 50px;
       background-color: map-get($color, black);
-      animation: scroller 2s linear infinite;
+      animation: scroller 2s cubic-bezier(.7, .2, 0.3, 1) infinite;
     }
   }
 }
@@ -144,8 +144,6 @@ Project presentation
         top: 8rem;
         height: 50px;
         width: 2px;
-        background-color: map-get($color, black);
-        animation: scroller 2s linear infinite;
       }
     }
 

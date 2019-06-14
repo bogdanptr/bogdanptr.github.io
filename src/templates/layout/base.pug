@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+  head
+    include /includes/head.pug
+  body
+    nav.mainNav
+      a(href="/").mainNav__item return
+
+    .mainContent
+      block content
+
+    .mainFooter
+      include /includes/foot

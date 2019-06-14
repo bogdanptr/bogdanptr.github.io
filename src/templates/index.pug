@@ -11,34 +11,33 @@ block vars
 block header
   .profile
   .bio
-    h1.h0.mb0.mt0 Bogdan Petrescu.
-    h1.h0.text--slim.mt0 a designer crafting#[br]digital experiences
-    //- p Self-taught product designer and front-end developer based in Romania. I am passionate about solving problems through use of design and technological implementations. I put a strong emphasis on user experience, responsive web design and web accessibility.
-    //- p Currently getting up in the morning to design stuff at #[a(href="https://www.caphyon.com/") Caphyon].
-    p.text--muted Read more #[a(href="#") about me] or check out some of my #[a(href="#selected-projects") selected projects].
+    h1.h0.mb0.mt0 Bogdan Petrescu
+    h1.text--slim.mt0 a designer crafting#[br]digital experiences
+    a(href="/about.html").btn #[span ↪] Read my story
 
 block content
-  #selected-projects.pattern-block.pattern-block--left
-    .container
-      section
-        .section-scroller.section-scroller--right(data-section="Selected projects")
-          span
-        a(href="#").project
-          .project__info
-            h2.project__info--title.mt0.mb0 Advanced Web Ranking
-            p.mb0 Redefining ranking.
-            p.mt0.text--muted.mb0 ui/ux design / prototype / development
-          p.project__date 2016 - Ongoing
+  .container
+    .project
+      .project--screenshot
+        img(src="/assets/img/awr-overview.png" alt="Advanced Web Ranking presentation screenshot").img-fluid
+      a(href="/").project__details
+        span.project__details--cta ↪
+        .project__details--info
+          span.text--small.text--muted.mb0.mt0 2016 - Present
+          h2.h3.mt0.text--normal Advanced Web Ranking
+          p A little story about how we redesigned our website from zero to hero in just a few months.
 
-        a(href="").project.project--disabled
-          .project__info
-            h2.project__info--title.mt0.mb0 AWRStudyr
-            p.mb0 Coming soon!
-          p.project__date 2018
+    .project.project--alt
+      p.text--small 2018
+      .project--screenshot
+        img(src="/assets/img/awr-overview.png" alt="Advanced Web Ranking presentation screenshot").img-fluid
+        .project__details
+          .project__details--title
+            span AWR
+            span Studyr
+          a(href="/about.html") Read study
 
   .container
     section
-      .section-scroller.section-scroller--left(data-section="More shots")
-        span
       ul#dribbbleShots.list-unstyled
-    p.text--center More on #[a(href="https://dribbble.com/bogdanptr") Dribbble]
+    p.text--center Explore more 'behind the scenes' shots on #[a(href="https://dribbble.com/bogdanptr") Dribbble]

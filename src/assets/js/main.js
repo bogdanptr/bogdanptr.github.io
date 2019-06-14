@@ -21,3 +21,15 @@ $.ajax({
       }
     }
 });
+
+
+// Fluid typo
+// var textSpans = document.querySelectorAll('.project__details--title > span');
+
+// for( var i=0; i<textSpans.length; i++ ){
+
+//  while( textSpans[i].offsetWidth > parseInt(window.getComputedStyle(textSpans[i].parentNode).width)  ){
+//    textSpans[i].style.fontSize = parseInt(window.getComputedStyle(textSpans[i]).fontSize) - 1 +"px";
+//  }
+  
+// }

@@ -67,14 +67,12 @@ svg {
   margin: 2rem 0;
 
   &__cta {
-    padding: 5rem 0;
     margin: 5rem 0;
 
     &--mail {
       position: relative;
       display: inline-block;
       margin-top: 1rem;
-      padding: 0 .5rem;
       font-size: 1.5rem;
     }
   }
@@ -86,8 +84,22 @@ svg {
   }
 }
 
+.mainContent {
+  background-image: url(/assets/img/shape-bg.png);
+  background-image: 100%;
+  background-repeat: no-repeat;
+  margin: 0 -2rem;
+}
+
+.about {
+  display: flex;
+  max-width: 60%;
+  flex: 0 0 60%;
+  flex-direction: column;
+}
+
 a {
-  color: map-get($color, black);
+  
 }
 
 .profile {
@@ -102,6 +114,40 @@ section {
 
 hr {
   opacity: .3;
+}
+
+.btn {
+  z-index: 1;
+  position: relative;
+  padding: .5rem 1rem;
+  color: map-get($color, link);
+  outline: none;
+  border: none;
+  text-decoration: none;
+
+  span {
+    vertical-align: middle;
+    margin-right: .3rem;
+  }
+
+  &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F6F6F6;
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform .35s ease-in-out;
+  }
+
+  &:hover::before {
+    transform-origin: center left;
+    transform: scaleX(1);
+  }
 }
 
 .pattern-block {
@@ -162,7 +208,7 @@ hr {
   }
 
   .container {
-    max-width: 1024px;
+    max-width: 960px;
   }
 }
 

@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   color: map-get($color, black);
   background-color: #fff;
   font-size: 1rem;
@@ -84,22 +84,12 @@ svg {
   }
 }
 
-.mainContent {
-  background-image: url(/assets/img/shape-bg.png);
-  background-image: 100%;
-  background-repeat: no-repeat;
-  margin: 0 -2rem;
-}
 
 .about {
   display: flex;
   max-width: 60%;
   flex: 0 0 60%;
   flex-direction: column;
-}
-
-a {
-  
 }
 
 .profile {

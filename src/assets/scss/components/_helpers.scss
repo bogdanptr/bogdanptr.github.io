@@ -29,7 +29,12 @@ Helpers
   }
 
   &--small {
-    font-size: 80%;
+    font-size: 70%;
+  }
+
+  &--label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 }
 

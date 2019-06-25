@@ -96,28 +96,6 @@ Helpers
   height: auto;
 }
 
-// Clearfix
-.cf:before,
-.cf:after {
-  content:"";
-  display:table;
-}
-
-.cf:after {
-  clear:both;
-}
-
-// Floats
-.pull {
-  &--left {
-    float: left;
-  }
-
-  &--right {
-    float: right;
-  }
-}
-
 // Alignments
 .align-middle {
   vertical-align: middle;

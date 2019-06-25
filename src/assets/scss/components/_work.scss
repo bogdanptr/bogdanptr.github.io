@@ -2,27 +2,6 @@
 Project presentation
 */
 
-.section {
-    width: 50%;
-    margin-left: auto;
-    position: relative;
-    margin-top: 4rem;
-    margin-bottom: 8rem;
-
-  &--title {
-    font-weight: 400;
-    padding-top: 2rem;
-  }
-
-  img {
-    position: absolute;
-    left: -5rem;
-    top: -2rem;
-    opacity: .1;
-    transform: rotate(-20deg);
-  }
-}
-
 .project {
   display: flex;
   height: 100vh;
@@ -72,17 +51,6 @@ Project presentation
         stroke-dashoffset: 150px;
         opacity: 1;
       }
-    }
-  }
-}
-
-.project--alt {
-  margin-left: auto;
-
-  .project {
-    &__details {
-      right: initial;
-      left: -2rem;
     }
   }
 }

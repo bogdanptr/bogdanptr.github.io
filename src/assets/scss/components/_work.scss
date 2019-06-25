@@ -49,35 +49,28 @@ Project presentation
 
   &__btn {
     position: relative;
-    display: block;
+    display: inline-block;
     color: #fff;
     text-decoration: none;
+    padding: .5rem .5rem .5rem 0;
 
     span {
       margin-left: 1rem;
+      vertical-align: middle;
     }
 
     svg .circle {
       stroke-dasharray: 40%;
       stroke-dashoffset: 30px;
-      opacity: .5;
+      opacity: .3;
+      transition: .7s ease-in;
     }
 
     &:hover {
       svg .circle {
-        animation: draw 3s infinite;
+        stroke-dasharray: 0;
+        stroke-dashoffset: 150px;
         opacity: 1;
-      }
-    }
-
-    // .circle-animation {
-    //   animation: draw 3s infinite;
-    // }
-
-    @keyframes draw {
-      50% {
-        stroke-dashoffset: 100%;
-        stroke-dasharray: 10px 50px;
       }
     }
   }

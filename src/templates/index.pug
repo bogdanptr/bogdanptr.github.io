@@ -9,46 +9,71 @@ block vars
     }
 
 block header
-  .profile
-  .bio
-    h1.h0.mb0.mt0 Bogdan Petrescu
-    h1.text--slim.mt0 a designer crafting#[br]digital experiences
-    a(href="/about.html").btn #[span ↪] Read my story
+  .grid.grid-2
+    .section
+      p.text--small.text--muted.text--label On brief
+      h2.h4.mt0 Bogdan Petrescu, a designer crafting digital experiences.
+      h2.h4 A big believer in user-centered design.
+      h2.h4 Pasionate about product design but mostly I like to do a little bit of everything.
+      h2.h4 Dive into my imagination.
 
 block content
-  .container
+  .grid.grid-2
     .section
-      h2.h4.section--title Some selected projects I’ve been working through the years.
-      img(width="300" src="/assets/img/work.png" alt="Work typography illustration").img-fluid
+      p.text--small.text--muted.text--label Projects
+      h2.h4 Some selected projects I’ve been working through the years.
 
-  .project.project--one
-    .project__details
-      p.text--small.text--muted.text--label.mb0.mt0 2016 - Present
-      h2.h1.mt0.text--normal.mb0 Advanced Web Ranking
-      p From research to sketches, visuals and front-end implementation, AWR is the biggest project I’ve been contributed.
-      br
-      p.text--small.text--muted.text--label Case studies
-      a(href="#").project__btn
-        svg(width="40" height="40" fill="none" viewBox="0 0 148 148" xmlns="http://www.w3.org/2000/svg")
-          path(d="M71 53l26 22.5L71 98M97 75H37" stroke="currentColor" vector-effect="non-scaling-stroke")
-          circle(cx="73" cy="73" r="70" stroke="currentColor" id="circle1" class="circle" vector-effect="non-scaling-stroke")
-        span Redefining rank tracking
+  .grid.grid-8
+    .project
+      p.text--small.text--muted.text--label 2016 - Present
+      a(href="#").project__img
+        <video playsinline muted autoplay loop>
+        <source src="https://cdn.dribbble.com/users/606683/videos/24862/finder-for-ipad-concept-video-preview.mp4" type="video/mp4">
+        </video>
+      .project__info
+        h6.mt0.mb0 Advanced Web Ranking
+        small.text--small.text--muted advancedwebranking.com
 
-      a(href="#").project__btn
-        svg(width="40" height="40" fill="none" viewBox="0 0 148 148" xmlns="http://www.w3.org/2000/svg")
-          path(d="M71 53l26 22.5L71 98M97 75H37" stroke="currentColor" vector-effect="non-scaling-stroke")
-          circle(cx="73" cy="73" r="70" stroke="currentColor" id="circle1" class="circle" vector-effect="non-scaling-stroke")
-        span A new website
+  .grid.grid-8
+    .project-2
+      p.text--small.text--muted.text--label 2018
+      a(href="#").project__img
+        img(src="/assets/img/awrstudyr-cover.png" alt="")
+      .project__info
+        h6.mt0.mb0 AWRStudyr
+        small.text--small.text--muted awrstudyr.com
+      
 
-      a(href="#").project__btn
-        svg(width="40" height="40" fill="none" viewBox="0 0 148 148" xmlns="http://www.w3.org/2000/svg")
-          path(d="M71 53l26 22.5L71 98M97 75H37" stroke="currentColor" vector-effect="non-scaling-stroke")
-          circle(cx="73" cy="73" r="70" stroke="currentColor" id="circle1" class="circle" vector-effect="non-scaling-stroke")
-        span Guiding the styles
+  //- .projects
+  //-   .project.project--one
+  //-     .project__details
+  //-       p.text--small.text--muted.text--label.mb0.mt0 2016 - Present
+  //-       h2.h1.mt0.text--normal.mb0 Advanced Web Ranking
+  //-       p From research to sketches, visuals and front-end implementation, AWR is the biggest project I’ve been contributed.
+  //-       br
+  //-       p.text--small.text--muted.text--label Case studies
+  //-       a(href="#").project__btn
+  //-         svg(width="40" height="40" fill="none" viewBox="0 0 148 148" xmlns="http://www.w3.org/2000/svg")
+  //-           path(d="M71 53l26 22.5L71 98M97 75H37" stroke="currentColor" vector-effect="non-scaling-stroke")
+  //-           circle(cx="73" cy="73" r="70" stroke="currentColor" id="circle1" class="circle" vector-effect="non-scaling-stroke")
+  //-         span Redefining rank tracking
 
-    .project__image
+  //-       a(href="#").project__btn
+  //-         svg(width="40" height="40" fill="none" viewBox="0 0 148 148" xmlns="http://www.w3.org/2000/svg")
+  //-           path(d="M71 53l26 22.5L71 98M97 75H37" stroke="currentColor" vector-effect="non-scaling-stroke")
+  //-           circle(cx="73" cy="73" r="70" stroke="currentColor" id="circle1" class="circle" vector-effect="non-scaling-stroke")
+  //-         span A new website
 
-  .container
-    section
-      ul#dribbbleShots.list-unstyled
-    p.text--center Explore more 'behind the scenes' shots on #[a(href="https://dribbble.com/bogdanptr") Dribbble]
+  //-       a(href="#").project__btn
+  //-         svg(width="40" height="40" fill="none" viewBox="0 0 148 148" xmlns="http://www.w3.org/2000/svg")
+  //-           path(d="M71 53l26 22.5L71 98M97 75H37" stroke="currentColor" vector-effect="non-scaling-stroke")
+  //-           circle(cx="73" cy="73" r="70" stroke="currentColor" id="circle1" class="circle" vector-effect="non-scaling-stroke")
+  //-         span Guiding the styles
+
+  //-     .project__image
+
+
+  //- .container
+  //-   section
+  //-     ul#dribbbleShots.list-unstyled
+  //-   p.text--center Explore more 'behind the scenes' shots on #[a(href="https://dribbble.com/bogdanptr") Dribbble]

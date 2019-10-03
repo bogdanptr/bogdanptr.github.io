@@ -15,7 +15,10 @@ $grid-breakpoints: (
 // Colors
 // map-get($color, black)
 $color: (
-  black: #16171B,
-  link: #0154FF,
+  black: #111111,
+  link: #0083A0,
   purple: #8069C3
 );
+
+// Spacing
+$letter-space: 2px;

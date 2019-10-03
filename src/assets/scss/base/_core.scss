@@ -2,6 +2,9 @@
 Core
 */
 
+
+// DOM
+
 *,
 *:after,
 *:before {
@@ -21,14 +24,7 @@ body {
   margin: 0 2rem;
 }
 
-svg {
-  vertical-align: middle;
-}
-
-.container {
-  max-width: 769px;
-  margin: 0 auto;
-}
+// Main layouts
 
 .mainNav {
   display: flex;
@@ -39,13 +35,23 @@ svg {
 
   &__item {
     margin-left: auto;
-    font-weight: bold;
+    letter-spacing: $letter-space;
   }
 }
 
-.mainHeader {
-  display: grid;
-  grid-template-columns: 1fr;
+.mark {
+  font-family: 'Libre Baskerville', serif;
+  display: inline-block;
+  background: url(https://media.giphy.com/media/xThuWlT47FLpqr1giY/giphy.gif);
+  background-size: 100%;
+  background-position: top center;
+  -webkit-background-clip: text;
+  clip-path: polygon(0 30%, 100% 30%, 100% 80%, 0 80%);
+  letter-spacing: -1px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+  color: transparent;
 }
 
 .mainFooter {
@@ -69,93 +75,66 @@ svg {
   }
 }
 
-.profile {
-  display: none;
-}
+// Core components
 
-section {
-  position: relative;
-  margin: 4rem 0;
-  padding: 2rem 0;
+.section {
+  grid-column: 2;
+  width: 80%;
+  margin: 5rem 0;
 }
 
 hr {
   opacity: .3;
 }
 
-.btn {
-  z-index: 1;
-  position: relative;
-  padding: .5rem 1rem;
-  color: map-get($color, link);
-  outline: none;
-  border: none;
-  text-decoration: none;
-
-  span {
-    vertical-align: middle;
-    margin-right: .3rem;
-  }
-
-  &::before {
-    content: '';
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #F6F6F6;
-    transform-origin: center right;
-    transform: scaleX(0);
-    transition: transform .35s ease-in-out;
-  }
-
-  &:hover::before {
-    transform-origin: center left;
-    transform: scaleX(1);
-  }
+svg {
+  vertical-align: middle;
 }
 
-@media screen and (min-width: 769px) {
-  // Header
-  .mainHeader {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
-    align-items: center;
-    justify-content: center;
+// .btn {
+//   z-index: 1;
+//   position: relative;
+//   padding: .5rem 1rem;
+//   color: map-get($color, link);
+//   outline: none;
+//   border: none;
+//   text-decoration: none;
 
-    .profile {
-      background-image: url(/assets/img/pic.jpg);
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      height: 100vh;
-      display: block;
-    }
-  }
+//   span {
+//     vertical-align: middle;
+//     margin-right: .3rem;
+//   }
 
-  .pattern-block::before {
-    width: 60%;
-  }
-}
+//   &::before {
+//     content: '';
+//     z-index: -1;
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     background-color: #F6F6F6;
+//     transform-origin: center right;
+//     transform: scaleX(0);
+//     transition: transform .35s ease-in-out;
+//   }
+
+//   &:hover::before {
+//     transform-origin: center left;
+//     transform: scaleX(1);
+//   }
+// }
+
+// Breakpoints
 
 @media screen and (min-width: 1025px) {
   html {
     font-size: 18px;
-  }
-
-  .container {
-    max-width: 960px;
   }
 }
 
 @media screen and (min-width: 1281px) {
   html {
     font-size: 20px;
-  }
-
-  .container {
-    max-width: 1120px;
   }
 }

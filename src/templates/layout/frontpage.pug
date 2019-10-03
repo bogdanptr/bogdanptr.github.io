@@ -4,13 +4,16 @@ html(lang="en")
     include /includes/head.pug
   body
     nav.mainNav
-      a(href="/about.html").mainNav__item about
+      a(href="/").mark bogdanpetrescu
+      a(href="/about.html").mainNav__item.small about
 
     header.mainHeader
-      block header
+      .container
+        block header
 
     .mainContent
-      block content
+      .container
+        block content
 
     .mainFooter
       include /includes/foot

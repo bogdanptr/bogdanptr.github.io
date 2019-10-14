@@ -19,13 +19,6 @@ Layout
 		grid-template-columns: repeat(8, 1fr);
 	}
 
-	img,
-	video {
-		object-fit: cover;
-		width: 100%;
-		height: 100%;
-	}
-
 	&--gap {
 		grid-gap: $gutter $gutter*2;
 	}

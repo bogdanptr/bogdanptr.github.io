@@ -28,10 +28,16 @@ body {
 
 .mainNav {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   position: sticky;
   top: 2rem;
   z-index: 10;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  span {
+    margin-left: .3rem;
+  }
 
   &__item {
     margin-left: auto;
@@ -42,7 +48,7 @@ body {
 .mark {
   font-family: 'Libre Baskerville', serif;
   display: inline-block;
-  background: url(https://media.giphy.com/media/xThuWlT47FLpqr1giY/giphy.gif);
+  // background: url(https://media.giphy.com/media/xThuWlT47FLpqr1giY/giphy.gif);
   background-size: 100%;
   background-position: top center;
   -webkit-background-clip: text;
@@ -51,36 +57,40 @@ body {
   font-weight: 700;
   font-size: 1.2rem;
   margin: 0;
-  color: transparent;
+  color: #111;
 }
 
 .mainFooter {
-  margin: 2rem 0;
+  margin: 0 -2rem;
+  background-color: #F5F5F5;
 
-  &__cta {
-    margin: 5rem 0;
-
-    &--mail {
-      position: relative;
-      display: inline-block;
-      margin-top: 1rem;
-      font-size: 1.5rem;
-    }
+  &--info {
+    padding: 2rem 0;
   }
 
-  &__social {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
+  .waves {
+    background-image: url(/assets/img/waves.svg);
+    height: 100px;
+    width: 100%;
+    background-size: 80%;
+    background-repeat: repeat-x;
+    background-position: top center;
+    margin-bottom: -2rem;
+    margin-top: 2rem;
   }
 }
 
 // Core components
 
 .section {
-  grid-column: 2;
+  grid-column: 1;
   width: 80%;
-  margin: 5rem 0;
+  margin: 5rem 0 5rem auto;
+
+  &--alt {
+    grid-column: 2;
+    margin: 5rem 0;
+  }
 }
 
 hr {
@@ -90,40 +100,6 @@ hr {
 svg {
   vertical-align: middle;
 }
-
-// .btn {
-//   z-index: 1;
-//   position: relative;
-//   padding: .5rem 1rem;
-//   color: map-get($color, link);
-//   outline: none;
-//   border: none;
-//   text-decoration: none;
-
-//   span {
-//     vertical-align: middle;
-//     margin-right: .3rem;
-//   }
-
-//   &::before {
-//     content: '';
-//     z-index: -1;
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     background-color: #F6F6F6;
-//     transform-origin: center right;
-//     transform: scaleX(0);
-//     transition: transform .35s ease-in-out;
-//   }
-
-//   &:hover::before {
-//     transform-origin: center left;
-//     transform: scaleX(1);
-//   }
-// }
 
 // Breakpoints
 

@@ -1,15 +1,11 @@
 block foot
-  //- .container
-  //-   p.mb0 Interested in talking?
-  //-   h2.h1.mt0.text--normal Let's have a #[a(href="#") chat!]
-  //-   img(width="400" src="/assets/img/contact-bg.png" alt="Ellipse illustration").img-fluid
-
   .container
-    hr
-    .mainFooter__social
-      p.mt0.mb0.text--small.text--muted 2019, Bogdan Petrescu
+    .mainFooter--info
+      p.mb0 Interested in talking?
+      a(href="#")
+        h2.h1.mt0.text--normal Let's have a chat
 
-      ul.list-unstyled--v.mb0.text--small
+      ul.list-unstyled--v.mb0
         li
           a(href="https://twitter.com/bogdanptr" target="_blank" rel="noopener noreferrer") Twitter
 
@@ -18,6 +14,8 @@ block foot
 
         li
           a(href="https://www.instagram.com/bogdan.ptr/" target="_blank" rel="noopener noreferrer") Instagram
+      p.mb0.text--muted.text--small © 2019, Bogdan Petrescu loves solving problems
+  .waves
 
   script(src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
   script(src = "/assets/js/main.js")

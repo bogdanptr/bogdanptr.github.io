@@ -66,10 +66,26 @@ body {
   background-image: linear-gradient(to bottom, #F8F6F5, white 50%);
 
   &--cta {
-    margin: 7rem 0;
+    position: relative;
+    margin: 10rem 0;
 
     a {
       display: inline-block;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--contact {
+    display: flex;
+    align-items: center;
+
+    > a {
+      margin-left: auto;
     }
   }
 }

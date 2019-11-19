@@ -14,6 +14,12 @@ Project presentation
   height: 350px;
   padding: 0 10rem;
   text-align: center;
+  color: #222;
+  font-weight: 400;
+
+  h2 {
+    color: currentColor;
+  }
 
   &::before,
   &::after {
@@ -58,8 +64,10 @@ Project presentation
   }
 
   &:hover {
+    color: #fff;
+
     h2 {
-      color: #fff;
+      color: currentColor;
       -webkit-text-stroke: 0;
     }
 
@@ -74,5 +82,12 @@ Project presentation
       z-index: -1;
       transform: translateY(10px);
     }
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .project {
+    width: 100%;
+    height: 400px;
   }
 }

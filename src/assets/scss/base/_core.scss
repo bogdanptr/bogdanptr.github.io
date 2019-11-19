@@ -63,17 +63,13 @@ body {
 .mainFooter {
   margin: 0 -2rem;
   padding: 2rem calc(2rem - 15px); // Hardcoded x-axis values body's margins
-  background-image: url(/assets/img/footer-bg.png);
-  background-size: 40%;
-  background-repeat: no-repeat;
-  background-position: top right;
+  background-image: linear-gradient(to bottom, #F8F6F5, white 50%);
 
   &--cta {
-    margin-bottom: 7rem;
+    margin: 7rem 0;
 
     a {
       display: inline-block;
-      text-decoration: underline;
     }
   }
 }
@@ -114,5 +110,11 @@ svg {
 @media screen and (min-width: 1281px) {
   html {
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  html {
+    font-size: 22px;
   }
 }

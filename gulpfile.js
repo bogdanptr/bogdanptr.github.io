@@ -12,7 +12,7 @@ var gulp          = require('gulp'),
                         'CNAME',
                       ],
                       fonts: [
-                        'millerdisplay-light.ttf'
+                        'maelstrom-sans.woff'
                       ]}
 
 gulp.task('scss', function() {

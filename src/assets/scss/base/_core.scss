@@ -13,18 +13,20 @@ Core
 
 html {
   font-size: 16px;
-  line-height: 1.4;
 }
 
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: $font-sans-serif;
   color: map-get($color, black);
-  background-color: #fff;
+  background-color: map-get($color, background);
   font-size: 1rem;
-  margin: 0 2rem;
 }
 
 // Main layouts
+
+.mainContent {
+  margin-top: 3rem;
+}
 
 .mainNav {
   display: flex;
@@ -32,60 +34,112 @@ body {
   position: sticky;
   top: 2rem;
   z-index: 10;
-  max-width: 1280px;
-  margin: 0 auto;
+  margin: 0 2rem;
 
   span {
     margin-left: .3rem;
   }
 
   &__item {
+    padding: .5rem;
+    display: block;
     margin-left: auto;
-    letter-spacing: $letter-space;
   }
 }
 
 .mark {
-  font-family: 'Libre Baskerville', serif;
   display: inline-block;
-  // background: url(https://media.giphy.com/media/xThuWlT47FLpqr1giY/giphy.gif);
-  background-size: 100%;
-  background-position: top center;
-  -webkit-background-clip: text;
-  clip-path: polygon(0 30%, 100% 30%, 100% 80%, 0 80%);
+  margin: 0;
+  font-family: $font-serif;
   letter-spacing: -1px;
   font-weight: 700;
-  font-size: 1.2rem;
-  margin: 0;
-  color: #111;
+  text-transform: initial;
+  transition: none;
+  color: map-get($color, primary);
+
+  &:hover {
+    letter-spacing: -1px;
+  }
+}
+
+.mainHeader {
+  position: relative;
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  &__heading {
+    position: absolute;
+    top: 2rem;
+    color: map-get($color, secondary);
+
+    &--info {
+      position: absolute;
+
+      &:nth-of-type(2) {
+        bottom: 9rem;
+        right: 0;
+
+        &::before {
+          content: "";
+          position: absolute;
+          background: url(/assets/img/star.svg) no-repeat;
+          background-size: cover;
+          width: 50px;
+          height: 50px;
+          left: -1rem;
+          top: -1rem;
+          z-index: -1;
+        }
+      }
+
+      &:nth-of-type(3) {
+        bottom: 0;
+        left: 0;
+        font-family: $font-serif;
+        width: 25%;
+        text-align: right;
+      }
+    }
+  }
 }
 
 .mainFooter {
-  margin: 0 -2rem;
-  padding: 2rem calc(2rem - 15px); // Hardcoded x-axis values body's margins
-  background-image: linear-gradient(to bottom, #F8F6F5, white 50%);
+  margin-top: 20rem;
+  padding: 2rem 0 10rem;
 
   &--cta {
-    position: relative;
-    margin: 10rem 0;
-
     a {
+      position: absolute;
       display: inline-block;
+      top: -7.5rem;
     }
 
-    img {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+    span {
+      color: map-get($color, primary);
+      font-weight: 400;
+      margin: 0 1rem;
+      text-transform: none;
+    }
+
+    h3 {
+      display: inline-block;
+
+      &:first-child {
+        color: map-get($color, secondary);
+      }
     }
   }
 
   &--contact {
-    display: flex;
-    align-items: center;
+    text-align: right;
 
-    > a {
-      margin-left: auto;
+    ul {
+      li {
+        margin-bottom: 1rem;
+      }
     }
   }
 }
@@ -93,12 +147,52 @@ body {
 // Core components
 
 .section {
-  grid-column: 1;
-  margin: 5rem 0 5rem auto;
+  margin-top: 8rem;
 
-  &--alt {
-    grid-column: 2;
-    margin: 5rem 0;
+  &__title {
+    display: block;
+    position: relative;
+    margin: 0;
+  }
+
+  &__label {
+    position: absolute;
+    left: -2rem;
+    top: 1rem;
+    writing-mode: vertical-lr;
+    margin: 0;
+  }
+
+  &__info {
+    width: 45%;
+    text-align: right;
+    margin-left: auto;
+
+    &--quote {
+      font-family: $font-serif;
+      font-size: 1.2rem;
+      margin-top: auto;
+      filter: blur(1px);
+    }
+  }
+}
+
+.section--alt {
+  .section {
+    &__title {
+      text-align: right;
+    }
+
+    &__label {
+      left: unset;
+      right: -2rem;
+    }
+
+    &__info {
+      text-align: left;
+      margin-right: auto;
+      margin-left: 0;
+    }
   }
 }
 
@@ -126,11 +220,5 @@ svg {
 @media screen and (min-width: 1281px) {
   html {
     font-size: 20px;
-  }
-}
-
-@media screen and (min-width: 1441px) {
-  html {
-    font-size: 22px;
   }
 }

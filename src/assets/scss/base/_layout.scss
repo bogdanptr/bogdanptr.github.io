@@ -3,30 +3,70 @@ Layout
 */
 
 .container {
-	max-width: 1280px;
+	max-width: 90%;
 	margin: 0 auto;
 	padding: 0 $gutter/2;
 }
 
-.grid {
+// Parallax
+$parallax-perspective : 1 !default;
+$parallax-element     : "body" !default;
+$parallax-ios         : true !default;
+
+@mixin parallax-init(
+  $perspective  : $parallax-perspective,
+  $element      : $parallax-element,
+  $parallax-ios : $parallax-ios
+  ) {
+  @if $element == "body" {
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+  #{$element} {
+    overflow: auto;
+    perspective: $perspective * 1px;
+    transform-style: preserve-3d;
+    // Allows for smooth scrolling but disables parallax effects.
+    @if $parallax-ios == false {
+      -webkit-overflow-scrolling: touch;
+    }
+    // Preserve 3D
+    &, * {
+      transform-style: preserve-3d;
+    }
+  }
+}
+
+@mixin parallax(
+  $distance    : 0,
+  $perspective : $parallax-perspective
+  ) {
+  transform:
+    translateZ($distance * $perspective * 1px)
+    scale(abs($distance - 1))
+  ;
+  z-index: $distance * 1000;
+}
+
+@include parallax-init;
+
+.mainHeader {
+	&__profile {
+		@include parallax(-.3);
+	}
+}
+
+.section__info--quote {
+	@include parallax(-.3);
+}
+
+// Sections
+.section-grid {
 	display: grid;
-
-	&-2 {
-		grid-template-columns: 1fr 1fr;
-	}
-
-	&-8 {
-		grid-template-columns: repeat(8, 1fr);
-	}
-
-	&--gap {
-		grid-gap: $gutter $gutter*2;
-	}
-
-	// Helpers
-	&__align {
-		&--center {
-			align-items: center !important;
-		}
-	}
+	grid-template-columns: 1fr 1fr;
 }

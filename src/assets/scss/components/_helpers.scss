@@ -25,7 +25,7 @@ Helpers
   }
 
   &--muted {
-    color: #b3b3b3;
+    color: #b3b3b3 !important;
   }
 
   &--small {
@@ -33,8 +33,15 @@ Helpers
   }
 
   &--label {
-    text-transform: lowercase;
-    letter-spacing: $letter-space;
+    font-family: $font-sans-serif;
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: 5px;
+    color: map-get($color, primary);
+  }
+
+  &--secondary {
+    color: map-get($color, secondary);
   }
 }
 

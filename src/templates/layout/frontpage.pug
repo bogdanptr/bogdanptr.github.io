@@ -3,10 +3,19 @@ html(lang="en")
   head
     include /includes/head.pug
   body
-    nav.mainNav
-      a(href="/").mark bogdanpetrescu
-      span.text--muted.text--small /#{page.url}
-      a(href="/about.html").mainNav__item.small about
+    .noise-bg
+    .mainNav
+      a(href="/").logo
+        svg(width="72" height="23")
+          use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo")
+      nav.mainNav__list
+        ul.list-unstyled
+          li.mainNav__list--item
+            a(href="/about.html").small about
+          li.mainNav__list--item
+            a(href="/projects.html").small projects
+          li.mainNav__list--item
+            a(href="/workflow.html").small workflow
 
     header.mainHeader
       block header

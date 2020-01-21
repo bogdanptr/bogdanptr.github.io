@@ -17,9 +17,22 @@ html {
 
 body {
   font-family: $font-sans-serif;
-  color: map-get($color, black);
+  color: map-get($color, primary);
   background-color: map-get($color, background);
   font-size: 1rem;
+  position: relative;
+  margin: 2rem;
+}
+
+.noise-bg {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  background-image: url(/assets/img/noise-texture.gif);
+  opacity: .04;
+  z-index: -10;
 }
 
 // Main layouts
@@ -29,21 +42,55 @@ body {
 }
 
 .mainNav {
-  display: flex;
-  align-items: baseline;
-  position: sticky;
-  top: 2rem;
-  z-index: 10;
-  margin: 0 2rem;
 
-  span {
-    margin-left: .3rem;
+  .logo,
+  &__list {
+    position: fixed;
+    z-index: 9999;
   }
 
-  &__item {
+  .logo {
+    left: 0;
+    top: 0;
+    margin: 2rem;
     padding: .5rem;
-    display: block;
-    margin-left: auto;
+  }
+
+  &__list {
+    bottom: 0;
+    right: 0;
+    margin: 3rem;
+
+    &--item {
+      display: inline-block;
+      counter-increment: nav-item;
+
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+
+      a {
+        position: relative;
+        transition: .2s ease-in;
+        padding: .5rem;
+        color: rgba(255,255,255,.5);
+
+        &::before {
+          content: "0" counter(nav-item);
+          position: absolute;
+          counter-increment: section;
+          color: currentColor;
+          left: -.5rem;
+          top: .2rem;
+          font-size: .6rem;
+          font-weight: 400;
+        }
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
   }
 }
 
@@ -69,6 +116,11 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+
+  &__profile {
+    height: 90vh;
+    width: auto;
+  }
 
   &__heading {
     position: absolute;
@@ -153,6 +205,7 @@ body {
     display: block;
     position: relative;
     margin: 0;
+    color: map-get($color, primary);
   }
 
   &__label {

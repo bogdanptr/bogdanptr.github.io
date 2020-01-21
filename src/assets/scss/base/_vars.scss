@@ -15,14 +15,12 @@ $grid-breakpoints: (
 // Colors
 // map-get($color, black)
 $color: (
-  background: #fff,
-  primary: #222222,
+  background: #111111,
+  primary: #fff,
   secondary: #F00000
 );
 
-$font-heading: 'Maelstrom Sans', sans-serif !default;
-$font-sans-serif: 'Roboto Condensed', sans-serif !default;
-$font-serif: 'Libre Baskerville', serif !default;
+$font-sans-serif: 'Work Sans', sans-serif !default;
 
 // Spacing
 $letter-space: 2px;

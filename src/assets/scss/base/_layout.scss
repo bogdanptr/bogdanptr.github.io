@@ -3,7 +3,7 @@ Layout
 */
 
 .container {
-	max-width: 90%;
+	max-width: 75vw;
 	margin: 0 auto;
 	padding: 0 $gutter/2;
 }
@@ -53,17 +53,17 @@ $parallax-ios         : true !default;
   z-index: $distance * 1000;
 }
 
-@include parallax-init;
+// @include parallax-init;
 
-.mainHeader {
-	&__profile {
-		@include parallax(-.3);
-	}
-}
+// .mainHeader {
+// 	&__profile {
+// 		@include parallax(-.3);
+// 	}
+// }
 
-.section__info--quote {
-	@include parallax(-.3);
-}
+// .section__info--quote {
+// 	@include parallax(-.3);
+// }
 
 // Sections
 .section-grid {

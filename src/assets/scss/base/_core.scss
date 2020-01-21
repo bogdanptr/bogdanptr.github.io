@@ -94,21 +94,6 @@ body {
   }
 }
 
-.mark {
-  display: inline-block;
-  margin: 0;
-  font-family: $font-serif;
-  letter-spacing: -1px;
-  font-weight: 700;
-  text-transform: initial;
-  transition: none;
-  color: map-get($color, primary);
-
-  &:hover {
-    letter-spacing: -1px;
-  }
-}
-
 .mainHeader {
   position: relative;
   display: flex;
@@ -150,7 +135,6 @@ body {
       &:nth-of-type(3) {
         bottom: 0;
         left: 0;
-        font-family: $font-serif;
         width: 25%;
         text-align: right;
       }
@@ -222,7 +206,6 @@ body {
     margin-left: auto;
 
     &--quote {
-      font-family: $font-serif;
       font-size: 1.2rem;
       margin-top: auto;
       filter: blur(1px);

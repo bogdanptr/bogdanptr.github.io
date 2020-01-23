@@ -103,40 +103,62 @@ body {
   margin: 0 auto;
 
   &__profile {
-    height: 90vh;
-    width: auto;
+    position: relative;
+
+    img {
+      height: 90vh;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    &::before {
+      background-image: url(/assets/img/profile-circles.svg);
+      top: 9rem;
+      left: 0;
+      width: 100%;
+    }
+
+    &::after {
+      background-image: url(/assets/img/profile-circles-alt.svg);
+      top: -4rem;
+      right: -5rem;
+      width: 80%;
+    }
   }
 
   &__heading {
     position: absolute;
-    top: 2rem;
-    color: map-get($color, secondary);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    h1 {
+      letter-spacing: -5px;
+    }
 
     &--info {
       position: absolute;
+      top: 2rem;
+      right: 10vw;
+      z-index: 2;
 
-      &:nth-of-type(2) {
-        bottom: 9rem;
-        right: 0;
-
-        &::before {
-          content: "";
-          position: absolute;
-          background: url(/assets/img/star.svg) no-repeat;
-          background-size: cover;
-          width: 50px;
-          height: 50px;
-          left: -1rem;
-          top: -1rem;
-          z-index: -1;
-        }
-      }
-
-      &:nth-of-type(3) {
-        bottom: 0;
-        left: 0;
-        width: 25%;
-        text-align: right;
+      &::before {
+        content: "";
+        position: absolute;
+        background: url(/assets/img/star.svg) no-repeat;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        left: -1rem;
+        top: -1rem;
+        z-index: -1;
       }
     }
   }

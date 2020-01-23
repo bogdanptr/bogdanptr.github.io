@@ -10,20 +10,19 @@ block vars
     }
 
 block header
-  img(src="/assets/img/profile-pic.png" alt="Bogdan Petrescu picture" width="800").img-fluid.mainHeader__profile
+  .mainHeader__profile
+    img(src="/assets/img/profile-pic.png" alt="Bogdan Petrescu picture")
   .mainHeader__heading
-    h1.h0.mt0.mb0 A
-    h1.mt0.mb0 Digital #[br] designer
+    h1.mt0.mb0.h0 A product #[br] designer
+    p.text--muted.mb0 dive into my imagination
   .mainHeader__heading--info
     ul.list-unstyled
       li
-        strong Strategy
+        strong.text--small.text--muted Strategy
       li
-        strong Product design
+        strong.text--small.text--muted Product design
       li
-        strong Development
-  .mainHeader__heading--info
-    p Self-taught product designer with 5 years experience in the design field
+        strong.text--small.text--muted Development
 
 block content
   .section-grid

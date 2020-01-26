@@ -4,101 +4,34 @@ Project presentation
 
 // Selected Projects Grid
 .project {
-  position: relative;
   display: flex;
-  flex-direction: column;
-  width: 80%;
   align-items: center;
   justify-content: center;
-  margin: 10rem auto;
-  height: 350px;
-  padding: 0 10rem;
-  text-align: center;
-  color: #222;
-  font-weight: 400;
-  text-transform: initial;
+  width: 80%;
+  margin: 3rem auto;
 
-  &:last-of-type {
-    margin-bottom: 7rem;
+  &:not(:first-of-type) {
+    margin-bottom: 10rem;
   }
 
-  h2 {
-    color: currentColor;
-  }
-
-  p > strong {
-    font-family: $font-sans-serif;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-    background-size: cover;
-    opacity: 0;
-    transition: .3s ease-in;
-  }
-
-  &::before {
-    z-index: -2;
-  }
-
-  &:nth-of-type(1) {
-    margin-top: 0;
-    &::before {
-      background-image: url('https://cdn.dribbble.com/users/1075340/screenshots/6363468/artboard_6.png');
-    }
-  }
-
-  &:nth-of-type(2) {
-    &::before {
-      background-image: url(https://cdn.dribbble.com/users/1075340/screenshots/6118787/af-pres.png);
-    }
-  }
-
-  &:nth-of-type(3) {
-    &::before {
-      background-image: url(/assets/img/awrstudyr-cover.png);
-    }
-  }
-
-  h2 {
+  &__title {
+    text-align: right;
+    margin-right: -4rem;
     color: transparent;
-    -webkit-text-stroke: .5px black;
-  }
+    -webkit-text-stroke: 1px #fff;
+    transition: .5s cubic-bezier(.77,0,.175,1);
 
-  &:hover {
-    color: #fff;
-    letter-spacing: 0;
-
-    h2 {
-      color: currentColor;
-      -webkit-text-stroke: 0;
-    }
-
-    &::before {
-      opacity: 1;
-      transform: translateY(10px);
-    }
-
-    &::after {
-      background-color: #111;
-      opacity: .4;
-      z-index: -1;
-      transform: translateY(10px);
+    &:hover {
+      color: #fff;
     }
   }
-}
 
-@media screen and (min-width: 1441px) {
-  .project {
-    width: 100%;
-    height: 400px;
+  &__presentation {
+    z-index: -1;
+
+    img {
+      border-radius: 50%;
+    }
   }
 }
 

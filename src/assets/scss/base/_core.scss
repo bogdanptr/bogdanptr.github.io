@@ -31,7 +31,7 @@ body {
   left: 0;
   top: 0;
   background-image: url(/assets/img/noise-texture.gif);
-  opacity: .04;
+  opacity: .05;
   z-index: -10;
 }
 
@@ -205,32 +205,26 @@ body {
 // Core components
 
 .section {
-  margin-top: 8rem;
+  margin-top: 13rem;
 
   &__title {
     display: block;
     position: relative;
     margin: 0;
-    color: map-get($color, primary);
-  }
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    text-transform: uppercase;
 
-  &__label {
-    position: absolute;
-    left: -2rem;
-    top: 1rem;
-    writing-mode: vertical-lr;
-    margin: 0;
-  }
-
-  &__info {
-    width: 45%;
-    text-align: right;
-    margin-left: auto;
-
-    &--quote {
-      font-size: 1.2rem;
-      margin-top: auto;
-      filter: blur(1px);
+    &::before {
+      content: "";
+      position: absolute;
+      left: -5rem;
+      top: -6rem;
+      width: 13rem;
+      height: 13rem;
+      background-image: linear-gradient(-30deg, #F02B00, rgba(240, 43, 0, 0) 75%);
+      border-radius: 50%;
+      z-index: -1;
     }
   }
 }

@@ -8,9 +8,10 @@ Project presentation
   align-items: center;
   justify-content: center;
   width: 80%;
-  margin: 3rem auto;
+  margin-left: auto;
+  margin-right: auto;
 
-  &:not(:first-of-type) {
+  &:not(:last-of-type) {
     margin-bottom: 10rem;
   }
 
@@ -19,7 +20,7 @@ Project presentation
     margin-right: -4rem;
     color: transparent;
     -webkit-text-stroke: 1px #fff;
-    transition: .5s cubic-bezier(.77,0,.175,1);
+    transition: .3s ease-in;
 
     &:hover {
       color: #fff;

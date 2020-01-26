@@ -165,39 +165,55 @@ body {
 }
 
 .mainFooter {
-  margin-top: 20rem;
-  padding: 2rem 0 10rem;
+  &__info {
+    width: 80%;
+    margin: 0 auto 5rem;
 
-  &--cta {
     a {
-      position: absolute;
+      position: relative;
       display: inline-block;
-      top: -7.5rem;
-    }
+      margin-bottom: 1rem;
 
-    span {
-      color: map-get($color, primary);
-      font-weight: 400;
-      margin: 0 1rem;
-      text-transform: none;
-    }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background-color: #fff;
+        transition: .5s cubic-bezier(.77,0,.175,1);
+      }
 
-    h3 {
-      display: inline-block;
-
-      &:first-child {
-        color: map-get($color, secondary);
+      &:hover {
+        &::after {
+          width: 100%;
+        }
       }
     }
-  }
 
-  &--contact {
-    text-align: right;
+    &--email {
+      position: relative;
 
-    ul {
-      li {
-        margin-bottom: 1rem;
+      &::before {
+        content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTMyLjEgMEw2NCAzMiAzMi4xIDY0bC01LjYtNS42IDIyLjMtMjIuNUgwdi03LjhoNDguOEwyNi41IDUuNiAzMi4xIDB6IiBmaWxsPSIjZmZmIi8+PC9zdmc+);
+        position: absolute;
+        left: -7rem;
+        top: 0;
+        pointer-events: none;
+        transition: .5s cubic-bezier(.77,0,.175,1);
       }
+
+      &:hover {
+        &::before {
+          transform: scale(.8);
+          left: -4rem;
+        }
+      }
+    }
+
+    &--social {
+      margin-top: 5rem;
     }
   }
 }
@@ -206,6 +222,7 @@ body {
 
 .section {
   margin-top: 13rem;
+  margin-bottom: 6rem;
 
   &__title {
     display: block;
@@ -233,17 +250,12 @@ body {
   .section {
     &__title {
       text-align: right;
-    }
 
-    &__label {
-      left: unset;
-      right: -2rem;
-    }
-
-    &__info {
-      text-align: left;
-      margin-right: auto;
-      margin-left: 0;
+      &::before {
+        left: unset;
+        right: -5rem;
+        background-image: linear-gradient(30deg, #F02B00, rgba(240, 43, 0, 0) 75%);
+      }
     }
   }
 }

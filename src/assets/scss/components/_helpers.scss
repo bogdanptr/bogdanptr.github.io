@@ -33,11 +33,9 @@ Helpers
   }
 
   &--label {
-    font-family: $font-sans-serif;
     text-transform: uppercase;
     font-size: .7rem;
-    letter-spacing: 5px;
-    color: map-get($color, primary);
+    letter-spacing: 1px;
   }
 
   &--secondary {

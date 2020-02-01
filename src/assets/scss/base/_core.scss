@@ -170,26 +170,8 @@ body {
     margin: 0 auto 5rem;
 
     a {
-      position: relative;
       display: inline-block;
       margin-bottom: 1rem;
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 2px;
-        width: 0;
-        background-color: #fff;
-        transition: .5s cubic-bezier(.77,0,.175,1);
-      }
-
-      &:hover {
-        &::after {
-          width: 100%;
-        }
-      }
     }
 
     &--email {
@@ -201,7 +183,7 @@ body {
         left: -7rem;
         top: 0;
         pointer-events: none;
-        transition: .5s cubic-bezier(.77,0,.175,1);
+        transition: .4s cubic-bezier(.77,0,.175,1);
       }
 
       &:hover {

@@ -54,6 +54,11 @@ body {
     top: 0;
     margin: 2rem;
     padding: .5rem;
+    transition: none;
+
+    &::after {
+      content: none;
+    }
   }
 
   &__list {
@@ -71,7 +76,7 @@ body {
 
       a {
         position: relative;
-        transition: .2s ease-in;
+        transition: .2s ease-in !important;
         padding: .5rem;
         color: rgba(255,255,255,.5);
 
@@ -84,6 +89,10 @@ body {
           top: .2rem;
           font-size: .6rem;
           font-weight: 400;
+        }
+
+        &::after {
+          content: none;
         }
 
         &:hover {

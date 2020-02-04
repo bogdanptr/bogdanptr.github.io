@@ -220,47 +220,6 @@ body {
 }
 
 // Core components
-
-.section {
-  margin-top: 13rem;
-  margin-bottom: 6rem;
-
-  &__title {
-    display: block;
-    position: relative;
-    margin: 0;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
-    text-transform: uppercase;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: -5rem;
-      top: -6rem;
-      width: 13rem;
-      height: 13rem;
-      background-image: linear-gradient(-30deg, #F02B00, rgba(240, 43, 0, 0) 75%);
-      border-radius: 50%;
-      z-index: -1;
-    }
-  }
-}
-
-.section--alt {
-  .section {
-    &__title {
-      text-align: right;
-
-      &::before {
-        left: unset;
-        right: -5rem;
-        background-image: linear-gradient(30deg, #F02B00, rgba(240, 43, 0, 0) 75%);
-      }
-    }
-  }
-}
-
 hr {
   opacity: .3;
 }

@@ -3,7 +3,7 @@ Layout
 */
 
 .container {
-	max-width: 75vw;
+	max-width: 70vw;
 	margin: 0 auto;
 	padding: 0 $gutter/2;
 }
@@ -70,7 +70,47 @@ Layout
 // }
 
 // Sections
-.section-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+.section {
+	margin-top: 13rem;
+	margin-bottom: 6rem;
+
+	&__title {
+	  display: block;
+	  position: relative;
+	  margin: 0;
+	  color: transparent;
+	  -webkit-text-stroke: 1px #fff;
+	  text-transform: uppercase;
+
+	  &::before {
+      content: "";
+      position: absolute;
+      left: -5rem;
+      top: -6rem;
+      width: 13rem;
+      height: 13rem;
+      background-image: linear-gradient(-30deg, #F02B00, rgba(240, 43, 0, 0) 75%);
+      border-radius: 50%;
+      z-index: -1;
+	  }
+	}
+}
+
+.section--alt {
+  .section {
+    &__title {
+      text-align: right;
+
+      &::before {
+        left: unset;
+        right: -5rem;
+        background-image: linear-gradient(30deg, #F02B00, rgba(240, 43, 0, 0) 75%);
+      }
+    }
+  }
+}
+
+article {
+  width: 70%;
+  margin: 0 auto;
 }

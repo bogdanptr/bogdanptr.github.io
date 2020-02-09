@@ -12,16 +12,33 @@ Core
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
   font-family: $font-sans-serif;
-  color: map-get($color, primary);
+  color: map-get($color, secondary);
   background-color: map-get($color, background);
   font-size: 1rem;
   position: relative;
   margin: 2rem;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: map-get($color, primary);
+  }
+}
+
+::selection {
+  background: map-get($color, primary);
+  color: #fff;
 }
 
 .noise-bg {
@@ -237,12 +254,12 @@ svg {
 
 @media screen and (min-width: 1025px) {
   html {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 @media screen and (min-width: 1281px) {
   html {
-    font-size: 20px;
+    font-size: 22px;
   }
 }

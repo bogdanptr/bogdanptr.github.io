@@ -39,7 +39,7 @@ Helpers
   }
 
   &--secondary {
-    color: map-get($color, secondary);
+    color: map-get($color, primary);
   }
 }
 

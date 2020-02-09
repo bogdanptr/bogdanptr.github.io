@@ -89,7 +89,7 @@ Layout
       top: -6rem;
       width: 13rem;
       height: 13rem;
-      background-image: linear-gradient(-30deg, #F02B00, rgba(240, 43, 0, 0) 75%);
+      background-image: linear-gradient(-30deg, map-get($color, primary), rgba(240, 43, 0, 0) 75%);
       border-radius: 50%;
       z-index: -1;
 	  }
@@ -104,7 +104,7 @@ Layout
       &::before {
         left: unset;
         right: -5rem;
-        background-image: linear-gradient(30deg, #F02B00, rgba(240, 43, 0, 0) 75%);
+        background-image: linear-gradient(30deg, map-get($color, primary), rgba(240, 43, 0, 0) 75%);
       }
     }
   }

@@ -3,9 +3,25 @@ Layout
 */
 
 .container {
-	max-width: 70vw;
+  max-width: 80vw;
+  width: 100%;
 	margin: 0 auto;
 	padding: 0 $gutter/2;
+}
+
+@media screen and (min-width: 1441px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+// Grid
+.grid {
+  display: grid;
+
+  &-2 {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 // Parallax
@@ -72,7 +88,8 @@ Layout
 // Sections
 .section {
 	margin-top: 13rem;
-	margin-bottom: 6rem;
+  margin-bottom: 6rem;
+  width: 60%;
 
 	&__title {
 	  display: block;
@@ -111,6 +128,6 @@ Layout
 }
 
 article {
-  width: 70%;
-  margin: 0 auto;
+  width: 50%;
+  margin: 0 5rem auto;
 }

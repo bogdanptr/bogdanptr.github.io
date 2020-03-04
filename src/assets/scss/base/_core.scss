@@ -12,11 +12,13 @@ Core
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: $font-sans-serif;
+  font-weight: 300;
   color: map-get($color, secondary);
   background-color: map-get($color, background);
   font-size: 1rem;
@@ -24,7 +26,7 @@ body {
   margin: 2rem;
 
   &::-webkit-scrollbar {
-    width: 5px;
+    width: 4px;
   }
 
   &::-webkit-scrollbar-track {
@@ -59,17 +61,16 @@ body {
 }
 
 .mainNav {
-
-  .logo,
-  &__list {
-    position: fixed;
-    z-index: 9999;
-  }
+  position: sticky;
+  display: flex;
+  align-items: center;
+  top: 0;
+  margin: -2rem;
+  padding: 1rem 2rem;
+  background-image: linear-gradient(to bottom, map-get($color, background), transparent);
+  z-index: 9999;
 
   .logo {
-    left: 0;
-    top: 0;
-    margin: 2rem;
     padding: .5rem;
     transition: none;
 
@@ -79,10 +80,8 @@ body {
   }
 
   &__list {
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    margin-right: 2rem;
+    display: inline-block;
+    margin-left: auto;
 
     span {
       color: rgba(255,255,255,.5);
@@ -90,40 +89,21 @@ body {
     }
 
     &--item {
-      writing-mode: vertical-lr;
-
-      &:not(:last-of-type) {
-        margin-bottom: .5rem;
-      }
+      display: inline-block;
 
       a {
         position: relative;
-        font-size: .7rem;
+        font-size: .8rem;
         transition: .2s ease-in !important;
         padding: .5rem;
         color: rgba(255,255,255,.5);
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: -.5rem;
-          top: 50%;
-          transform: translateY(-50%);
-          background-color: currentColor;
-          height: .25rem;
-          border-radius: 50%;
-        }
 
         &::after {
           content: none;
         }
 
         &:hover {
-          color: #fff;
-
-          &::before {
-            width: .25rem;
-          }
+          color: map-get($color, primary);
         }
       }
     }
@@ -136,7 +116,7 @@ body {
   width: 60%;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 2rem auto;
 
   &__profile {
     position: relative;
@@ -174,10 +154,6 @@ body {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-
-    h1 {
-      letter-spacing: -5px;
-    }
 
     &--info {
       position: absolute;
@@ -237,6 +213,93 @@ body {
 }
 
 // Core components
+.list-roman {
+  list-style-type: none;
+  counter-reset: roman-counter;
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    counter-increment: roman-counter-list;
+
+    &::before {
+      content: counter(roman-counter-list, upper-roman);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      color: map-get($color, gray);
+    }
+
+    > p {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.process {
+  &__list {
+    display: flex;
+
+    &--item {
+      position: relative;
+      flex: 1;
+      padding: 0 2rem;
+
+      &:nth-child(1) {
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          height: 8rem;
+          width: 8rem;
+          left: -2rem;
+          top: -3rem;
+          border-radius: 50%;
+          z-index: -1;
+        }
+
+        &::before {
+          background-image: linear-gradient(to bottom, map-get($color, primary), transparent);
+        }
+
+        &::after {
+          background-color: map-get($color, background);
+          transform: scale(.98);
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          content: "";
+          position: absolute;
+          height: 8rem;
+          width: 8rem;
+          left: -2rem;
+          top: -3rem;
+          border-radius: 50%;
+          background-image: linear-gradient(to bottom, map-get($color, primary), map-get($color, background) 70%);
+          z-index: -1;
+        }
+      }
+
+      &:nth-child(3) {
+        &::before {
+          content: "";
+          position: absolute;
+          height: 8rem;
+          width: 8rem;
+          left: -2rem;
+          top: -3rem;
+          border-radius: 50%;
+          background-image: linear-gradient(to bottom, map-get($color, primary), rgba(#FF0C3A, .5));
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
 hr {
   opacity: .3;
 }
@@ -250,16 +313,37 @@ svg {
   fill: none;
 }
 
-// Breakpoints
+// Components
+.flow {
+  width: 33.33%;
+  display: inline-block;
+  &__box {
+    width: 20vw;
+    height: 40vh;
+    border: 1px dashed rgba(255,255,255,.5);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
 
-@media screen and (min-width: 1025px) {
-  html {
-    font-size: 20px;
+    &:hover {
+      border-color: map-get($color, primary);
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
   }
 }
 
+// Breakpoints
+
 @media screen and (min-width: 1281px) {
   html {
-    font-size: 22px;
+    font-size: 18px;
   }
 }

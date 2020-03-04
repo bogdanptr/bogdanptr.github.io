@@ -25,7 +25,7 @@ Helpers
   }
 
   &--muted {
-    color: #b3b3b3 !important;
+    color: map-get($color, gray) !important;
   }
 
   &--small {

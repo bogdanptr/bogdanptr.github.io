@@ -6,17 +6,13 @@ Project presentation
 .project {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
 
   &:not(:last-of-type) {
     margin-bottom: 10rem;
   }
 
   &__title {
-    text-align: right;
     margin-right: -4rem;
   }
 
@@ -26,6 +22,17 @@ Project presentation
     img {
       border-radius: 50%;
     }
+  }
+}
+
+.project--alt {
+  flex-direction: row-reverse;
+  margin-left: auto;
+
+  .project__title {
+    margin-left: -4rem;
+    margin-right: 0;
+    text-align: right;
   }
 }
 

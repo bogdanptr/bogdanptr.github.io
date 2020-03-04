@@ -15,31 +15,59 @@ block header
   .mainHeader__heading
     h1.mt0.mb0.h0 A product #[br] designer
     p.text--muted.mb0 dive into my imagination
-  .mainHeader__heading--info
-    ul.list-unstyled
-      li
-        strong.text--small.text--muted Strategy
-      li
-        strong.text--small.text--muted Product design
-      li
-        strong.text--small.text--muted Development
 
 block content
-  .section
-    h1.h0.section__title Selected#[br]Projects
+  .section#about
+    h1.mt0 A little about myself
+    .text--muted
+      p I’m Bogdan Petrescu, a self-taught digital product designer with 5 years of experience in the design field.
+      p Focused on transforming ideas into efficient user experiences, packaged in a accessible and visually pleasing interface. I’m deeply passionate about product design at both a strategic and hands-on level. On the other hand, I am trying to stay up-to-date with the latest news about CSS, web accessibility and responsive web design.
+      p Really passionate about these topics:
+    ul.list-roman
+      li
+        p.h4 Strategy
+      li
+        p.h4 User Experience
+      li
+        p.h4 Visual Design
+      li
+        p.h4 Prototyping
+      li
+        p.h4 Front-end Development
 
+  .section#selected-projects
+    h1.mt0 Some of the projects I’ve been working to
   .project
     a(href="#").project__title
+      p.text--label.text--muted 2016 - Present
       h2.h1.mt0.mb0 Advanced#[br]Web Ranking
     .project__presentation
-      img(src="http://placehold.it/500x500" alt="Advanced Web Ranking illustration")
-  .project
+      img(src="http://placehold.it/600x600" alt="Advanced Web Ranking illustration")
+  .project.project--alt
     a(href="#").project__title
+      p.text--label.text--muted 2018
       h2.h1.mt0.mb0 AWRStudyr
     .project__presentation
-      img(src="http://placehold.it/500x500" alt="AWRStudyr illustration")
+      img(src="http://placehold.it/600x600" alt="AWRStudyr illustration")
   .project
     a(href="#").project__title
-      h2.h1.mt0.mb0 Rethinking #[br]rank tracking
+      p.text--label.text--muted 2020
+      h2.h1.mt0.mb0 Wattspeed
     .project__presentation
-      img(src="http://placehold.it/500x500" alt="Advanced Web Ranking app illustration")
+      img(src="http://placehold.it/600x600" alt="Advanced Web Ranking app illustration")
+
+  .section#workflow
+    h1.mt0 My approach
+  ul.process__list.list-unstyled
+    li.process__list--item
+      p.text--label.text--muted Starting with a
+      h2.mt0 Strategy
+      p.text--muted Spontaneity is cool, but when it comes to a product, you would want a strategy that will determine a clear vision of the project.
+    li.process__list--item
+      p.text--label.text--muted And moving to
+      h2.mt0 Execution
+      p.text--muted Bringing the vision to life. Nothing beats a high-fidelity prototype that will help to feel and interact with the product.
+    li.process__list--item
+      p.text--label.text--muted That result in a real
+      h2.mt0 Product
+      p.text--muted Using the latest technologies stack, we now have a interactive product, ready to see the real world.

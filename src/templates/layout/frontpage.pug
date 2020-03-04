@@ -3,7 +3,6 @@ html(lang="en")
   head
     include /includes/head.pug
   body
-    .noise-bg
     .mainNav
       a(href="/").logo
         svg(width="90" height="28")
@@ -11,11 +10,11 @@ html(lang="en")
       nav.mainNav__list
         ul.list-unstyled
           li.mainNav__list--item
-            a(href="/about.html") About
+            a(href="#about") About
           li.mainNav__list--item
-            a(href="/projects.html") Projects
+            a(href="#selected-projects") Projects
           li.mainNav__list--item
-            a(href="/workflow.html") Workflow
+            a(href="#workflow") Workflow
 
     header.mainHeader
       block header

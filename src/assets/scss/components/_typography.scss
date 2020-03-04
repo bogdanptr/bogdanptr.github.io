@@ -2,12 +2,35 @@
 Typography
 */
 
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
+@font-face {
+  font-family: 'Ilisarniq';
+  src: url('/assets/fonts/Ilisarniq-Bold.woff2') format('woff2'),
+       url('/assets/fonts/Ilisarniq-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ilisarniq';
+  src: url('/assets/fonts/Ilisarniq-Light.woff2') format('woff2'),
+       url('/assets/fonts/Ilisarniq-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ilisarniq';
+  src: url('/assets/fonts/Ilisarniq-Regular.woff2') format('woff2'),
+       url('/assets/fonts/Ilisarniq-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .h0,
 h1, .h1 {
-  letter-spacing: -5px;
-  line-height: .9;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -3px;
 }
 
 .h0 {

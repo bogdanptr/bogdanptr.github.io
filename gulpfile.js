@@ -12,7 +12,12 @@ var gulp          = require('gulp'),
                         'CNAME',
                       ],
                       fonts: [
-                        'maelstrom-sans.woff'
+                        'Ilisarniq-Light.woff',
+                        'Ilisarniq-Light.woff2',
+                        'Ilisarniq-Regular.woff',
+                        'Ilisarniq-Regular.woff2',
+                        'Ilisarniq-Bold.woff',
+                        'Ilisarniq-Bold.woff2'
                       ]}
 
 gulp.task('scss', function() {

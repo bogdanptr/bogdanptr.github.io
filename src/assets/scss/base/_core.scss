@@ -139,6 +139,7 @@ body {
       top: 9rem;
       left: 0;
       width: 100%;
+      animation: spawn 1s cubic-bezier(.165,.84,.44,1);
     }
 
     &::after {
@@ -146,6 +147,19 @@ body {
       top: -4rem;
       right: -5rem;
       width: 80%;
+      animation: spawn 2s cubic-bezier(.165,.84,.44,1);
+    }
+
+    @keyframes spawn {
+      0% {
+        opacity: 0;
+        transform: translateY(3rem);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
 
@@ -245,6 +259,7 @@ body {
       position: relative;
       flex: 1;
       padding: 0 2rem;
+      margin-top: 6rem;
 
       &:nth-child(1) {
         &::before,

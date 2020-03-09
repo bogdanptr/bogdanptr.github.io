@@ -14,6 +14,18 @@ Project presentation
 
   &__title {
     margin-right: -4rem;
+    background-image: linear-gradient(to right, map-get($color, primary), #fff 50%, #fff 0);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position .5s cubic-bezier(.165,.84,.44,1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 1rem;
+
+    &:hover {
+      background-position: 0;
+    }
   }
 
   &__presentation {
@@ -30,9 +42,15 @@ Project presentation
   margin-left: auto;
 
   .project__title {
+    background-image: linear-gradient(to left, map-get($color, primary), #fff 50%, #fff 0);
+    background-position: 0;
     margin-left: -4rem;
     margin-right: 0;
     text-align: right;
+
+    &:hover {
+      background-position: 100%;
+    }
   }
 }
 

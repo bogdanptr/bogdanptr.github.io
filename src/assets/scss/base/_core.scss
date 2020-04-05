@@ -97,7 +97,7 @@ body {
     margin-left: auto;
 
     span {
-      color: rgba(255,255,255,.5);
+      color: map-get($color, gray);
       margin: 0 .5rem;
     }
 
@@ -109,7 +109,7 @@ body {
         font-size: .8rem;
         transition: .2s ease-in !important;
         padding: .5rem;
-        color: rgba(255,255,255,.5);
+        color: map-get($color, gray);
 
         &::after {
           content: none;

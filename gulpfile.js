@@ -100,3 +100,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['pug', 'scss', 'js', 'images', 'browser-sync', 'copy', 'watch'], function() {});
+gulp.task('build', ['pug', 'scss', 'js', 'images', 'copy'], function() {});

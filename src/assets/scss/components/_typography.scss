@@ -3,77 +3,80 @@ Typography
 */
 
 @font-face {
-  font-family: 'Ilisarniq';
-  src: url('/assets/fonts/Ilisarniq-Bold.woff2') format('woff2'),
-       url('/assets/fonts/Ilisarniq-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Ilisarniq';
-  src: url('/assets/fonts/Ilisarniq-Light.woff2') format('woff2'),
-       url('/assets/fonts/Ilisarniq-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Ilisarniq';
-  src: url('/assets/fonts/Ilisarniq-Regular.woff2') format('woff2'),
-       url('/assets/fonts/Ilisarniq-Regular.woff') format('woff');
+  font-family: 'Monument Extended';
+  src: url('/assets/fonts/MonumentExtended-Regular.woff2') format('woff2'),
+      url('/assets/fonts/MonumentExtended-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+html {
+  font-size: 16px;
 }
 
 .h0,
 h1, .h1 {
   line-height: 1;
-  letter-spacing: -3px;
 }
 
 .h0,
 h1, .h1,
 h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h3, .h3 {
+  font-family: $font-sans-serif-display;
   font-weight: 400;
 }
 
 .h0 {
-  font-size: 5.5rem;
-}
-
-h1, .h1 {
-  font-size: 4rem
-}
-
-h2, .h2 {
   font-size: 3rem;
 }
 
-h3, .h3 {
-  font-size: 1.75rem;
+h1, .h1 {
+  font-size: 2.5rem;
 }
 
-h4, .h4 {
+h2, .h2 {
   font-size: 1.5rem;
 }
 
-h5, .h5 {
-  font-size: 1.25rem;
+h3, .h3 {
+  font-size: 1.3rem;
 }
 
-h6, .h6 {
-  font-size: 1rem;
+h4, .h4 {
+  font-weight: 400;
+}
+
+@media screen and (min-width: 769px) {
+  html {
+    font-size: 20px;
+  }
+
+  .h0 {
+    font-size: 4rem;
+  }
+  
+  h1, .h1 {
+    font-size: 3rem;
+  }
+  
+  h2, .h2 {
+    font-size: 2.5rem;
+  }
+  
+  h3, .h3 {
+    font-size: 1.5rem;
+  }
+
+  h4, .h4 {
+    font-size: 1.35rem;
+  }
+
 }
 
 h2 + p {
   margin-top: .5rem; // selected project hardcoded margin
 }
-
 
 a {
   position: relative;
@@ -97,3 +100,37 @@ a {
     }
   }
 }
+
+
+// // Fluid font size mixin
+// @function strip-unit($value) {
+//   @return $value / ($value * 0 + 1);
+// }
+
+// @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+//   $u1: unit($min-vw);
+//   $u2: unit($max-vw);
+//   $u3: unit($min-font-size);
+//   $u4: unit($max-font-size);
+
+//   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+//     & {
+//       font-size: $min-font-size;
+//       @media screen and (min-width: $min-vw) {
+//         font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+//       }
+//       @media screen and (min-width: $max-vw) {
+//         font-size: $max-font-size;
+//       }
+//     }
+//   }
+// }
+
+// $min_width: 320px;
+// $max_width: 1440px;
+// $min_font: 16px;
+// $max_font: 20px;
+
+// html {
+//   @include fluid-type($min_width, $max_width, $min_font, $max_font);
+// }

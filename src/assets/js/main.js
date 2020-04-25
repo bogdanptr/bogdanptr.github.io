@@ -23,9 +23,7 @@ $.ajax({
 });
 
 // Reveal element on scroll
-var scroll = window.requestAnimationFrame ||
-             // IE Fallback
-             function(callback){ window.setTimeout(callback, 1000/60)};
+var scroll = window.requestAnimationFrame
 var elementsToShow = document.querySelectorAll('.show-on-scroll');
 
 function loop() {
@@ -60,3 +58,14 @@ function isElementInViewport(el) {
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
   );
 }
+$(document).ready(function() {
+// projects show
+$(".projects ul a").hover(function() {
+    $("i").removeClass("active"),
+    $(".projects ul a").removeClass("active");
+    $(this).addClass("active");
+    $(".projects__screenshots img").removeClass("show"),
+    $("." + $(this).data("project-name")).addClass("show"),
+    $(this).next("i").addClass("active")
+}, function() {})
+});

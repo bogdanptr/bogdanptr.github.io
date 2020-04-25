@@ -36,6 +36,7 @@ Helpers
     text-transform: uppercase;
     font-size: .6rem;
     letter-spacing: 3px;
+    color: map-get($color, primary)
   }
 
   &--secondary {
@@ -104,4 +105,21 @@ Helpers
 // Alignments
 .align-middle {
   vertical-align: middle;
+}
+
+// Hide elements
+.hidden {
+  display: none !important;
+}
+
+@media screen and (max-width: 425px) {
+  .hidden--mobile {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .hidden--desktop {
+    display: block !important;
+  }
 }

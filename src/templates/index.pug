@@ -10,67 +10,91 @@ block vars
     }
 
 block header
-  .mainHeader__profile
+  picture.mainHeader__profile
+    source(media="(max-width: 768px)" srcset="/assets/img/m-profile-pic.jpg")
+    source(media="(max-width: 1024px)" srcset="/assets/img/profile-pic.png")
     img(src="/assets/img/profile-pic.png" alt="Bogdan Petrescu picture")
   .mainHeader__heading.show-on-scroll
-    h1.mt0.mb0.h0 A product #[br] designer
-    p.text--muted.mb0 dive into my imagination
+    h1.mb0.h0 A product #[br] designer
+    p.text--muted.mb0 Dive into my imagination
 
 block content
-  .section#about
-    p.text--label.text--muted About myself
-    h1.mt0 Everything starts with a story
-    .text--muted
-      p I’m Bogdan Petrescu, a self-taught digital product designer with 5 years of experience in the design field.
-      p Focused on transforming ideas into efficient user experiences, packaged in a accessible and visually pleasing interface. I’m deeply passionate about product design at both a strategic and hands-on level. On the other hand, I am trying to stay up-to-date with the latest news about CSS, web accessibility and responsive web design.
-      p Topics that bring my attention:
-    ul.list-roman.show-on-scroll
-      li
-        p.h4 Strategy
-      li
-        p.h4 User Experience
-      li
-        p.h4 Visual Design
-      li
-        p.h4 Prototyping
-      li
-        p.h4 Front-end Development
+  .container
+    .section#about
+      .section__title.show-on-scroll
+        p.text--label.text--muted About me
+        h2.mt0.h1 Everyone#[br]has a story
+      .section__content.show-on-scroll
+        h3 So do I...
+        h4 I’m Bogdan, a self-taught digital product designer, working in the industry for over 5 years.
+        p Focused on transforming ideas into efficient user experiences, packaged in a accessible and visually pleasing interfaces. I’m deeply passionate about product design at both a strategic and hands-on level. On the other hand, I have the knowledge to bridge the gap between design and implementation and build maintainable, fast and accessible interfaces.
+        p Some of my skills include:
+        ul.list-roman
+          li
+            p Strategy
+          li
+            p User Experience
+          li
+            p Visual Design
+          li
+            p Prototyping
+          li
+            p Front-end Development
 
-  .section#selected-projects
-    p.text--label.text--muted Selected projects
-    h1.mt0 Some of the projects I’ve been working to
-  .project.show-on-scroll
-    a(href="#").project__title
-      p.text--label.text--muted 2016 - Present
-      h2.mt0.mb0 Advanced#[br]Web Ranking
-    .project__presentation
-      img.img-fluid(src="/assets/img/awr-preview.png" width="600" alt="Advanced Web Ranking illustration")
-  .project.project--alt.show-on-scroll
-    a(href="#").project__title
-      p.text--label.text--muted 2018
-      h2.mt0.mb0 AWRStudyr
-    .project__presentation
-      img.img-fluid(src="/assets/img/awrstudyr-preview.png" width="600" alt="AWRStudyr illustration")
-  .project.show-on-scroll
-    a(href="#").project__title
-      p.text--label.text--muted 2020
-      h2.mt0.mb0 Wattspeed
-    .project__presentation
-      img(src="http://placehold.it/600x600" alt="Advanced Web Ranking app illustration")
+    .section#selected-projects
+      .section__title.show-on-scroll
+        p.text--label.text--muted Work
+        h2.mt0.h1 Projects I’ve been working on
+  .projects.show-on-scroll
+    .projects__screenshots
+      .projects__screenshots--first
+        ul.list-unstyled
+          li
+            img(src="/assets/img/projects/advancedwebranking/awr-preview1.png").img-fluid.awr.show
+          li
+            img(src="/assets/img/projects/awrstudyr/awrstudyr-preview1.png").img-fluid.awrstudyr
+          li
+            img(src="/assets/img/projects/wattspeed/wattspeed-preview1.png").img-fluid.wattspeed
+      .projects__screenshots--second
+        ul.list-unstyled
+          li
+            img(src="/assets/img/projects/advancedwebranking/awr-preview2.png").img-fluid.awr.show
+          li
+            img(src="/assets/img/projects/awrstudyr/awrstudyr-preview2.png").img-fluid.awrstudyr
+          li
+            img(src="/assets/img/projects/wattspeed/wattspeed-preview2.png").img-fluid.wattspeed
+    .projects__list
+      ul.list-unstyled.show-on-scroll
+        li
+          a(href="https://www.advancedwebranking.com/" target="_blank" rel="noopener noreferrer" data-project-name="awr").active
+            p.text--label.text--muted 2016 - Present
+            h3.mt0 Advanced#[br]Web Ranking
+            .projects__list--mobscreen
+        li
+          a(href="https://chrome.google.com/webstore/detail/wattspeed/mbkehkfjhncahcaggkncdaacfnikmoid" target="_blank" rel="noopener noreferrer" data-project-name="awrstudyr")
+            p.text--label.text--muted 2018
+            h3.mt0 AWRStudyr
+            .projects__list--mobscreen
+        li
+          a(href="https://wattspeed.com/" target="_blank" rel="noopener noreferrer" data-project-name="wattspeed")
+            p.text--label.text--muted 2020
+            h3.mt0 Wattspeed
+            .projects__list--mobscreen
 
-  .section#workflow
-    p.text--label.text--muted Workflow
-    h1.mt0 My approach
-  ul.process__list.list-unstyled
-    li.process__list--item
-      p.text--label.text--muted Starting with a
-      h3.mt0 Strategy
-      p.text--muted Spontaneity is cool, but when it comes to a product, you would want a strategy that will determine a clear vision of the project.
-    li.process__list--item
-      p.text--label.text--muted And moving to
-      h3.mt0 Execution
-      p.text--muted Bringing the vision to life. Nothing beats a high-fidelity prototype that will help to feel and interact with the product.
-    li.process__list--item
-      p.text--label.text--muted That result in a real
-      h3.mt0 Product
-      p.text--muted Using the latest technologies stack, we now have a interactive product, ready to see the real world.
+  .container
+    .section#workflow
+      .section__title.show-on-scroll
+        p.text--label.text--muted Workflow
+        h2.mt0.h1 The way I get#[br]things done
+      .section__content.show-on-scroll
+        p Process is a crucial part of getting things done, that’s why along the years, I improved my workflow, that today can be resumed in only a few steps.
+        ul
+          li
+            h3.mb0 Starting from a strategy
+            p Spontaneity is cool, but when it comes to a product, you would want a strategy that will determine a clear vision of the project. Before jumping in, there will be lots of questions about the product and it’s direction.
+          li
+            h3.mb0 Moving to execution
+            p With the informations gathered from the above step, we gonna bring the vision to life. This will result in a product prototype with a strong visual design language and flawless user experience which is ready to be implemented.
+          li
+            h3.mb0 Resulting a real product
+            p Once the prototype has been approved, development starts. Using the latest technologies stack, the product will soon be ready to see the real world. This will result in a implemented interface that is fully maintainable, fast and accessible.

@@ -54,7 +54,7 @@ body {
   position: sticky;
   display: flex;
   align-items: center;
-  top: 0;
+  top: -1px;
   margin: -1.5rem;
   padding: 1rem 2rem;
   background-image: linear-gradient(to bottom, map-get($color, background), transparent);
@@ -106,7 +106,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 152px);
   margin: 0 .5rem;
 
   &__profile {

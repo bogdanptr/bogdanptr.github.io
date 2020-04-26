@@ -23,7 +23,8 @@ Project presentation
         margin-bottom: 10rem;
       }
 
-      &::before {
+      &::before,
+      &::after {
         content: "";
         position: absolute;
         width: 50vw;
@@ -31,8 +32,17 @@ Project presentation
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+        z-index: -1;
+      }
+
+      &::before {
         background-size: cover;
         background-position: center;
+      }
+
+      &::after {
+        background-color: map-get($color, background);
+        opacity: .5;
       }
 
       &:nth-child(1)::before {
@@ -46,16 +56,6 @@ Project presentation
       &:nth-child(3)::before {
         background-image: url(/assets/img/projects/wattspeed/wattspeed-preview2.png);
       }
-    }
-
-    .active > h3{
-      background-image: linear-gradient(to right, map-get($color, primary), #fff 50%, #fff 0);
-      background-size: 200% 100%;
-      background-position: 0;
-      transition: .5s cubic-bezier(0.25, 0, 0.115, 0.995);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
     }
   }
 
@@ -123,9 +123,20 @@ Project presentation
           margin-top: 0;
         }
 
-        &::before {
+        &::before,
+        &::after {
           display: none;
         }
+      }
+
+      .active > h3{
+        background-image: linear-gradient(to right, map-get($color, primary), #fff 50%, #fff 0);
+        background-size: 200% 100%;
+        background-position: 0;
+        transition: .5s cubic-bezier(0.25, 0, 0.115, 0.995);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
       }
     }
 

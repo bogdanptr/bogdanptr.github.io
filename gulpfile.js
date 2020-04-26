@@ -9,6 +9,8 @@ var gulp          = require('gulp'),
     paths         = {
                       extras: [
                         'favicon.ico',
+                        'favicon.png',
+                        'favicon.svg',
                         'CNAME',
                       ],
                       fonts: [

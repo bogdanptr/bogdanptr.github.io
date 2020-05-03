@@ -169,26 +169,31 @@ body {
 }
 
 // Core components
-.list-roman {
+.list-numeric {
   list-style-type: none;
-  counter-reset: roman-counter;
+  counter-reset: numeric-counter;
   margin: 0;
   padding: 0;
 
   li {
     position: relative;
-    counter-increment: roman-counter-list;
+    counter-increment: numeric-counter-list;
 
     &::before {
-      content: counter(roman-counter-list, upper-roman) '.';
+      content: '0 'counter(numeric-counter-list,);
       position: absolute;
-      left: 0;
-      bottom: 0;
+      left: 0rem;
+      top: 0;
       color: map-get($color, gray);
+      font-size: .5rem;
     }
 
     > h3, p {
-      margin-left: 2rem;
+      margin-left: 1.5rem;
+    }
+
+    p {
+      font-size: 1.35rem;
     }
   }
 }

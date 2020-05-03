@@ -198,6 +198,25 @@ body {
   }
 }
 
+.process-list {
+  li {
+    h4 {
+      position: relative;
+      margin-left: 3rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -3rem;
+        top: 50%;
+        width: 2rem;
+        height: 1px;
+        background-color: currentColor;
+      }
+    }
+  }
+}
+
 hr {
   opacity: .3;
 }
@@ -238,7 +257,7 @@ svg {
 
   .mainHeader {
     align-items: center;
-    margin: 1rem auto;
+    margin: 0 auto;
     height: calc(100vh - 100px);
 
     &__profile {

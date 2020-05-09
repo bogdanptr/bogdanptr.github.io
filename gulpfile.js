@@ -12,6 +12,7 @@ var gulp          = require('gulp'),
                         'favicon.png',
                         'favicon.svg',
                         'CNAME',
+                        'robots.txt'
                       ],
                       fonts: [
                         'MonumentExtended-Regular.woff',

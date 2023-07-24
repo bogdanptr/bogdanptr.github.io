@@ -5,14 +5,14 @@ block vars
   -
     page = {
       url: "index",
-      title: "Bogdan Petrescu - A Product Designer",
+      title: "Bogdan Petrescu - Design Entrepreneur",
       description: "Focused on transforming ideas into efficient user experiences, packaged in a accessible and visually pleasing interfaces"
     }
 
 block header
   .mainHeader__profile
   .mainHeader__heading.show-on-scroll
-    h1.mb0.h0 A product #[br] designer
+    h1.mb0.h0 Design<br>Entrepreneur
     p.text--muted.mb0 Dive into my imagination
 
 block content
@@ -22,21 +22,19 @@ block content
         h2.mt0.h0 Everyone#[br]has a story
       .section__content.show-on-scroll
         h4 So do I...
-        p.text--muted I’m Bogdan, a self-taught digital product designer, working in the industry for over 5 years.
-        p.text--muted Focused on transforming ideas into efficient user experiences, packaged in accessible and visually pleasing interfaces. I’m deeply passionate about product design at both a strategic and hands-on level. On the other hand, I have the knowledge to bridge the gap between design and implementation and build maintainable, fast, and accessible interfaces.
-        br
-        p.text--muted What I actually do
+        p.text--muted I am a product designer turned entrepreneur with over 7 years of experience in building & scaling SaaS startups.
+        p.text--muted I help tech companies with:
         ul.list-numeric
           li
-            p Strategy
+            p Product discovery and market positioning
           li
-            p User Experience
+            p Developing the MVP prototype in order to raise funds
           li
-            p Visual Design
+            p Connecting the dots in the product's UX
           li
-            p Prototyping
+            p Scaling the product through deep audits and clearly solutions
           li
-            p Front-end Design
+            p Optimizing business conversions and improving user retention
 
     .section#work
       .section__title.show-on-scroll
@@ -46,39 +44,46 @@ block content
       .projects__screenshots--first
         ul.list-unstyled
           li
-            img(src="/assets/img/projects/advancedwebranking/awr-preview1.png" alt="First Advanced Web Ranking presentation screenshot" loading="lazy").img-fluid.awr.show
+            img(src="/assets/img/projects/prakti-preview1.png" alt="First Prakti presentation screenshot" loading="lazy").img-fluid.prakti.show
           li
-            img(src="/assets/img/projects/awrstudyr/awrstudyr-preview1.png" alt="First AWRStudyr presentation screenshot" loading="lazy").img-fluid.awrstudyr
+            img(src="/assets/img/projects/hyperhuman-preview1.png" alt="First Hyperhuman presentation screenshot" loading="lazy").img-fluid.hyperhuman
           li
-            img(src="/assets/img/projects/wattspeed/wattspeed-preview1.png" alt="First Wattspeed presentation screenshot" loading="lazy").img-fluid.wattspeed
+            img(src="/assets/img/projects/sessions-preview1.png" alt="First Sessions presentation screenshot" loading="lazy").img-fluid.sessions
+          li
+            img(src="/assets/img/projects/advancedwebranking/awr-preview1.png" alt="First Advanced Web Ranking presentation screenshot" loading="lazy").img-fluid.awr
       .projects__screenshots--second
         ul.list-unstyled
           li
-            img(src="/assets/img/projects/advancedwebranking/awr-preview2.png" alt="Second Advanced Web Ranking presentation screenshot" loading="lazy").img-fluid.awr.show
+            img(src="/assets/img/projects/prakti-preview2.png" alt="First Prakti presentation screenshot" loading="lazy").img-fluid.prakti.show
           li
-            img(src="/assets/img/projects/awrstudyr/awrstudyr-preview2.png" alt="Second AWRStudyr presentation screenshot" loading="lazy").img-fluid.awrstudyr
+            img(src="/assets/img/projects/hyperhuman-preview2.png" alt="Second Hyperhuman presentation screenshot" loading="lazy").img-fluid.hyperhuman
           li
-            img(src="/assets/img/projects/wattspeed/wattspeed-preview2.png" alt="Second Wattspeed presentation screenshot" loading="lazy").img-fluid.wattspeed
+            img(src="/assets/img/projects/sessions-preview2.png" alt="Second Sessions presentation screenshot" loading="lazy").img-fluid.sessions
+          li
+            img(src="/assets/img/projects/advancedwebranking/awr-preview2.png" alt="Second Advanced Web Ranking presentation screenshot" loading="lazy").img-fluid.awr
     .projects__list
       ul.list-unstyled.show-on-scroll
         li
+          a(href="https://prakti.studio/" target="_blank" rel="noopener noreferrer" data-project-name="prakti")
+            p.text--label.text--muted 2022 - Present
+            h3.mt0.mb0 Prakti Studio
+          .projects__list--mobscreen
+        li
+          a(href="https://hyperhuman.cc/" target="_blank" rel="noopener noreferrer" data-project-name="hyperhuman")
+            p.text--label.text--muted 2022
+            h3.mt0.mb0 Hyperhuman
+          .projects__list--mobscreen
+        li
+          a(href="https://sessions.us/" target="_blank" rel="noopener noreferrer" data-project-name="sessions")
+            p.text--label.text--muted 2021 - 2022
+            h3.mt0.mb0 Sessions
+          .projects__list--mobscreen
+        li
           a(href="https://www.advancedwebranking.com/" target="_blank" rel="noopener noreferrer" data-project-name="awr").active
-            p.text--label.text--muted 2016 - Present
+            p.text--label.text--muted 2016 - 2021
             h3.mt0.mb0 Advanced#[br]Web Ranking
-          p.text--small.text--muted Case study coming soon
           .projects__list--mobscreen
-        li
-          a(href="https://chrome.google.com/webstore/detail/wattspeed/mbkehkfjhncahcaggkncdaacfnikmoid" target="_blank" rel="noopener noreferrer" data-project-name="awrstudyr")
-            p.text--label.text--muted 2018
-            h3.mt0.mb0 AWRStudyr
-          p.text--small.text--muted Case study coming soon
-          .projects__list--mobscreen
-        li
-          a(href="https://wattspeed.com/" target="_blank" rel="noopener noreferrer" data-project-name="wattspeed")
-            p.text--label.text--muted 2020
-            h3.mt0.mb0 Wattspeed
-          p.text--small.text--muted Case study coming soon
-          .projects__list--mobscreen
+
 
   .container
     .section#process
